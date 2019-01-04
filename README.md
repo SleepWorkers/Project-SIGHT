@@ -1,11 +1,12 @@
 # Table of contents
 - [Table of contents](#table-of-contents)
 - [Introduction](#introduction)
-- [About Project](#about-project)
-- [Cloning project](#cloning-project)
+  - [About Project](#about-project)
+- [Cloning this project](#cloning-this-project)
   - [Users](#users)
   - [Developers](#developers)
     - [Ubuntu users](#ubuntu-users)
+    - [MacOS or Windows users](#macos-or-windows-users)
 - [Folder information](#folder-information)
   - [Visible folders](#visible-folders)
   - [Hidden folders](#hidden-folders)
@@ -19,7 +20,7 @@ This repository is created for the purpose of participation in [IICDC 2018](http
 |**Submission ID** | 372888 |
 
 
-# About Project
+## About Project
 This project is created for the purpose of participation in [IICDC 2018](https://innovate.mygov.in/india-innovation-challenge-design-contest-2018/) (India Innovation Challenge Design Contest).
 
 The human hand is the most versatile part of the body. We exploit its dexterity to provide a glove that can transcend today’s wearables by giving an organic feel while interacting with technology. We feel today,the most important and difficult to procure resources are time, money, health & safety. S.I.G.H.T. will safeguard these resources.
@@ -30,7 +31,8 @@ We've used the following operating systems in the development of this project. N
 
 The project proposal file can be found [here](./.media/docs/372888_IICDC\ Proposal.pdf).
 
-# Cloning project
+# Cloning this project
+If you're looking to contribute, you're a developer. If you're looking to only use the product, you're a user.
 ## Users
 To clone (download) the project, you can simply click on the **Clone or Download** button in the top right and download the entire project as a ZIP file.
 ![Download as ZIP](.media/photos/Download-project-ZIP.png)
@@ -60,6 +62,12 @@ Open a terminal and do the following:
     git clone https://github.com/SleepWorkers/Project-SIGHT.git
     ```
 
+### MacOS or Windows users
+1. Install [GitHub Desktop](https://desktop.github.com) app.
+2. Clone the repository (`File` -> `Clone Repository`) using the URL of this repository (https://github.com/SleepWorkers/Project-SIGHT.git) into a desired location.
+
+You can use the GitHub Desktop app for all version control and project management purposes.
+
 # Folder information
 Here are the folders available in this project
 
@@ -77,3 +85,5 @@ Here are the folders available in this project
 |-----|-----|
 |**.github**| All GitHub related documents.|
 |**.media**| Media files used for documentation purposes in the present working directory.|
+
+[![TheProjectsGuy developer shield](https://img.shields.io/badge/Dev-TheProjectsGuy-0061ff.svg)](https://github.com/TheProjectsGuy)
