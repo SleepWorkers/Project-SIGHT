@@ -4,6 +4,12 @@ about: Suggest an idea for this project
 
 ---
 
+## Feature name
+Name and brief information about the feature
+
+### Description
+Description of the feature in detail
+
 **Is your feature request related to a problem? Please describe.**
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
