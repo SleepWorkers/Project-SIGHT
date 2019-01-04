@@ -22,7 +22,9 @@ This project and everyone participating in it is governed by this code of conduc
 ## Have a question, feedback or suggestion ?
 This organization maintains a [Gitter community](https://gitter.im/Sleep-Workers/). We can't guarantee immediate response, we'll try our best to respond as soon as possible.
 
-Any public questions, feature requests, suggestions and feedback can be done through [this Gitter chat room](https://gitter.im/Sleep-Workers/SIGHT-Doc), you can join it by clicking [here](https://gitter.im/Sleep-Workers/SIGHT-Doc?utm_source=share-link&utm_medium=link&utm_campaign=share-link). Please don't spam on this chat room and keep your point as brief as possible.
+Any public questions, feature requests, suggestions and feedback can be done through [this Gitter chat room](https://gitter.im/Sleep-Workers/SIGHT-Doc), you can join it by clicking [here](https://gitter.im/Sleep-Workers/SIGHT-Doc?utm_source=share-link&utm_medium=link&utm_campaign=share-link). Please don't spam on this chat room and keep your points as brief as possible.
+
+You can also create an issue using the `feature_request` template.
 
 # Before Getting started
 Before you get started, you're suggested to go through the following documents:
@@ -63,7 +65,7 @@ You're strongly suggested to understand items under this note. Please go through
         ![Open Developers shield](https://img.shields.io/badge/Dev-GitHub--Username-0098bf.svg)
     > **Tip**: You can use [shields.io](https://shields.io/#/) to create developers shields
 - All your work must be well documented. `README.md` files are a good way of creating useful documentation for your work. You're urged to follow [this README template](./README_TEMPLATE.md), just to maintain uniformity.
-- This project follows _pull request_ workflow. Here's a step-by-step briefing:
+- This project follows _pull request_ workflow. Here's a step-by-step briefing of how work is done:
     1. An issue is created using one of the [templates](./ISSUE_TEMPLATE/).
     2. A branch is created from the `dev` branch under the name `issue-NUMBER`. For example, `issue-3`.
        > **Tip**: You could use another name if it's more descriptive but still short and brief
@@ -82,4 +84,6 @@ You're strongly suggested to understand items under this note. Please go through
 
 ## Project guidelines
 - All work is compartmentalized into a well defined file structure. You're supposed to follow the same. This makes navigation easy.
-- A documentation for all work is a **must** for the pull request to be accepted.
+- A documentation for all your work is a **must** for the pull request to be accepted.
+
+[![TheProjectsGuy developer shield](https://img.shields.io/badge/Dev-TheProjectsGuy-0061ff.svg)](https://github.com/TheProjectsGuy)
