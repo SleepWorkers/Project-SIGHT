@@ -19,8 +19,10 @@ This repository is created for the purpose of participation in [IICDC 2018](http
 
 # About Project
 This project is created for the purpose of participation in [IICDC 2018](https://innovate.mygov.in/india-innovation-challenge-design-contest-2018/) (India Innovation Challenge Design Contest).
-<!-- TODO: Add description here -->
 
+The human hand is the most versatile part of the body. We exploit its dexterity to provide a glove that can transcend today’s wearables by giving an organic feel while interacting with technology. We feeltoday,the most important and difficult to procure resources are time, money, health & safety. S.I.G.H.T. will safeguard these resources.
+
+The project proposal file can be found [here](./.media/docs/372888_IICDC\ Proposal.pdf).
 
 # Cloning project
 ## Users
@@ -28,6 +30,7 @@ To clone the project, you can simply click on the **Clone or Download** button i
 ![Download as ZIP](.media/photos/Download-project-ZIP.png)
 
 ## Developers
+Before getting started, please go through the [contributing](./.github/CONTRIBUTING.md) guidelines.
 You're suggested to clone this repository using the [git](https://git-scm.com/) tool which you can download [here](https://git-scm.com/downloads).
 > **Tip**: Clone using [SSH](https://help.github.com/articles/connecting-to-github-with-ssh/) is a better idea.
 
@@ -53,3 +56,4 @@ Open a terminal and do the following:
 
 # File structure
 <!-- TODO: Create a file structure and add description for it -->
+
