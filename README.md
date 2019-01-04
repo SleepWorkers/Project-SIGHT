@@ -24,6 +24,10 @@ This project is created for the purpose of participation in [IICDC 2018](https:/
 
 The human hand is the most versatile part of the body. We exploit its dexterity to provide a glove that can transcend today’s wearables by giving an organic feel while interacting with technology. We feel today,the most important and difficult to procure resources are time, money, health & safety. S.I.G.H.T. will safeguard these resources.
 
+We've used the following operating systems in the development of this project. Note that not all operating systems might support all packages of the project.
+  - [Ubuntu Xenial](http://releases.ubuntu.com/16.04/)
+  - [MacOS Mojave](https://www.apple.com/in/macos/mojave/)
+
 The project proposal file can be found [here](./.media/docs/372888_IICDC\ Proposal.pdf).
 
 # Cloning project

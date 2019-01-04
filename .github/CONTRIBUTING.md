@@ -40,7 +40,8 @@ Before you get started, you're suggested to go through the following documents:
 Here are a few suggestions for the developers of this project. You're recommended to follow these:
 - There's a [Gitter chatroom for developers](https://gitter.im/Sleep-Workers/SIGHT-Dev) of this project, which you can join by clicking [here](https://gitter.im/Sleep-Workers/SIGHT-Dev?utm_source=share-link&utm_medium=link&utm_campaign=share-link). No spamming, only formal developer chat.
 - You're suggested to use a modern text editor or IDE for documentation and coding. Here's what we've used:
-  - [Visual Studio Code](https://code.visualstudio.com/): Used for documentation.
+  - [Visual Studio Code](https://code.visualstudio.com/): Used for documentation and simple scripting.
+- If you're using MacOS or Windows, [GitHub Desktop](https://desktop.github.com) is recommended.
 - We've used the following operating systems in the development of this project. Note that not all operating systems might support all packages of the project.
   - [Ubuntu Xenial](http://releases.ubuntu.com/16.04/)
   - [MacOS Mojave](https://www.apple.com/in/macos/mojave/)
