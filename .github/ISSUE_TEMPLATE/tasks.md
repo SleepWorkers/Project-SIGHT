@@ -4,10 +4,12 @@ about: TODO and Task assignment
 
 ---
 
-**Task priority**: The priority of the task [HIGH, MEDIUM, LOW]
+**Task priority**: The priority of the task [HIGH | MEDIUM | LOW]
 
 # Task description
-A clear and concise description of task assigned
+**Topic**: What is the type of task [Application | API | CAD | Test | other] to be accomplished.
+## Description
+A clear and concise description of task assigned.
 
 **Person assigned**: Task assigned to \[...\]
 
@@ -15,6 +17,14 @@ A clear and concise description of task assigned
 
 # Must Haves
 Things that _have_ to be implemented.
+- [ ] Item 1
+- [ ] Item 2
+
+and so on...
 
 ## Extras
 Things that could be worked on after the _must haves_ are finished.
+- [ ] Item 1
+- [ ] Item 2
+
+and so on...
