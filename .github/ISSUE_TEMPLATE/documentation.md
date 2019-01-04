@@ -4,12 +4,10 @@ about: Issue related to documentation
 
 ---
 
-Issue in documentation
+Issue in documentation or documentation needed
 
 # Description
 Description of the issue or your query
-
-**Package**: Package name
 
 **Path**: Path of the README file (or a documentation file)
 
