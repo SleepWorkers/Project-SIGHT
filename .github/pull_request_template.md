@@ -1,2 +1,2 @@
-<!-- TODO: Create a pull request template -->
-[Placeholder]
+**Issue number**: Issue number(s) that are in the pull request
+**Notes**: Additional notes
