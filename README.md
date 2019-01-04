@@ -22,7 +22,7 @@ This repository is created for the purpose of participation in [IICDC 2018](http
 # About Project
 This project is created for the purpose of participation in [IICDC 2018](https://innovate.mygov.in/india-innovation-challenge-design-contest-2018/) (India Innovation Challenge Design Contest).
 
-The human hand is the most versatile part of the body. We exploit its dexterity to provide a glove that can transcend today’s wearables by giving an organic feel while interacting with technology. We feeltoday,the most important and difficult to procure resources are time, money, health & safety. S.I.G.H.T. will safeguard these resources.
+The human hand is the most versatile part of the body. We exploit its dexterity to provide a glove that can transcend today’s wearables by giving an organic feel while interacting with technology. We feel today,the most important and difficult to procure resources are time, money, health & safety. S.I.G.H.T. will safeguard these resources.
 
 The project proposal file can be found [here](./.media/docs/372888_IICDC\ Proposal.pdf).
 
@@ -60,7 +60,7 @@ Open a terminal and do the following:
 Here are the folders available in this project
 
 ## Visible folders
-<!-- TODO: Create a file structure and add description for it -->
+
 |||
 |-----|-----|
 |**test** | Files used during the testing phase |
