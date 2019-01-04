@@ -6,7 +6,9 @@
   - [Users](#users)
   - [Developers](#developers)
     - [Ubuntu users](#ubuntu-users)
-- [File structure](#file-structure)
+- [Folder information](#folder-information)
+  - [Visible folders](#visible-folders)
+  - [Hidden folders](#hidden-folders)
 
 # Introduction
 This repository is created for the purpose of participation in [IICDC 2018](https://innovate.mygov.in/india-innovation-challenge-design-contest-2018/) (India Innovation Challenge Design Contest). The project details _in short_ are summarized below:
@@ -26,7 +28,7 @@ The project proposal file can be found [here](./.media/docs/372888_IICDC\ Propos
 
 # Cloning project
 ## Users
-To clone the project, you can simply click on the **Clone or Download** button in the top right and download the entire project as a ZIP.
+To clone (download) the project, you can simply click on the **Clone or Download** button in the top right and download the entire project as a ZIP file.
 ![Download as ZIP](.media/photos/Download-project-ZIP.png)
 
 ## Developers
@@ -54,6 +56,20 @@ Open a terminal and do the following:
     git clone https://github.com/SleepWorkers/Project-SIGHT.git
     ```
 
-# File structure
-<!-- TODO: Create a file structure and add description for it -->
+# Folder information
+Here are the folders available in this project
 
+## Visible folders
+<!-- TODO: Create a file structure and add description for it -->
+|||
+|-----|-----|
+|**test** | Files used during the testing phase |
+|**cad**  | CAD files (Electrical and mechanical) |
+|**api**  | Final APIs of the product |
+|**apps** | Final applications for the product |
+
+## Hidden folders
+|||
+|-----|-----|
+|**.github**| All GitHub related documents.|
+|**.media**| Media files used for documentation purposes in the present working directory.|
