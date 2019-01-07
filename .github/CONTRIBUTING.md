@@ -4,9 +4,9 @@
 
 The following are the guidelines for contributing to Project SIGHT and it's various packages, which are hosted in the [Sleep Workers Organization](https://github.com/SleepWorkers) on GitHub. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
-## Table of Contents
+# Table of Contents
 - [Contributing to Project SIGHT](#contributing-to-project-sight)
-  - [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
   - [Code of Conduct](#code-of-conduct)
   - [Have a question, feedback or suggestion ?](#have-a-question-feedback-or-suggestion)
 - [Before Getting started](#before-getting-started)
