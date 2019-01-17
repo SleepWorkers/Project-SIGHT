@@ -1,8 +1,8 @@
-// Analog input terminal to which pulse sensor is attached
+// Analog input terminal to which the pulse sensor is attached
 #define PULSE_IN A0
 
 void setup() {
-  // Serial setup
+  // Serial setup code
   Serial.begin(115200);
 }
 
