@@ -25,3 +25,5 @@ We performed a few tests individually, these are placed in dedicated folders for
 [avneesh_test_phase1](./avneesh_test_phase1/) | Test codes written by @[TheProjectsGuy](https://github.com/TheProjectsGuy) |
 
 [![TheProjectsGuy developer shield](https://img.shields.io/badge/Dev-TheProjectsGuy-0061ff.svg)](https://github.com/TheProjectsGuy)
+[![Bharat0404 developer shield](https://img.shields.io/badge/Dev-Bharath0404-0061ff.svg)](https://github.com/bharath0404)
+[![Supaboi21 developer shield](https://img.shields.io/badge/Dev-Supaboi21-0061ff.svg)](https://github.com/supaboi21)

@@ -18,3 +18,7 @@ We've created the following codes for testing purposes
 | **Code name** | **Purpose** |
 | ----- | ------ |
 | [AnalogOutputSerial](./AnalogOutputSerial/) | To inspect the output of the sensor on the serial monitor |
+
+[![TheProjectsGuy developer shield](https://img.shields.io/badge/Dev-TheProjectsGuy-0061ff.svg)](https://github.com/TheProjectsGuy)
+[![Bharat0404 developer shield](https://img.shields.io/badge/Dev-Bharath0404-0061ff.svg)](https://github.com/bharath0404)
+[![Supaboi21 developer shield](https://img.shields.io/badge/Dev-Supaboi21-0061ff.svg)](https://github.com/supaboi21)
