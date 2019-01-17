@@ -5,10 +5,18 @@ All the testing done by [@TheProjectsGuy](https://github.com/TheProjectsGuy) (Av
 - [What is this?](#what-is-this)
 - [Table of Contents](#table-of-contents)
 - [How to use the tests?](#how-to-use-the-tests)
+  - [Windows](#windows)
   - [Ubuntu](#ubuntu)
 
 
 # How to use the tests?
+
+## Windows
+- Open [GitHub Desktop](https://desktop.github.com/) and clone the repository `https://github.com/SleepWorkers/Project-SIGHT.git`.
+    > **Tip**: If you're using SSH, you can use `git@github.com:SleepWorkers/Project-SIGHT.git` instead.
+
+- Checkout the `avneesh-test-phase1` branch.
+- Open the file that you want to inspect using the appropriate application for that file after that.
 
 ## Ubuntu
 Open terminal and type the following:
@@ -16,7 +24,7 @@ Open terminal and type the following:
     ```bash
     git clone -b avneesh-test-phase1 https://github.com/SleepWorkers/Project-SIGHT.git
     ```
-    - If you're using SSH, you can use `git@github.com:SleepWorkers/Project-SIGHT.git` instead.
+    > **Tip**: If you're using SSH, you can use `git@github.com:SleepWorkers/Project-SIGHT.git` instead.
 - If you've already cloned the repository
     ```bash
     git fetch origin avneesh-test-phase1
