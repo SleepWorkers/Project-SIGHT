@@ -87,3 +87,5 @@ Here are the folders available in this project
 |**.media**| Media files used for documentation purposes in the present working directory.|
 
 [![TheProjectsGuy developer shield](https://img.shields.io/badge/Dev-TheProjectsGuy-0061ff.svg)](https://github.com/TheProjectsGuy)
+[![Bharat0404 developer shield](https://img.shields.io/badge/Dev-Bharath0404-0061ff.svg)](https://github.com/bharath0404)
+[![Supaboi21 developer shield](https://img.shields.io/badge/Dev-Supaboi21-0061ff.svg)](https://github.com/supaboi21)
