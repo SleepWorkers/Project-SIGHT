@@ -44,5 +44,6 @@ All [Simulink](https://www.mathworks.com/products/simulink.html) files are prese
     ![OpAmp Iteration 2 image](../.media/photos/OpAmp2.png)
   - The output was **0.346 V** in voltage deviation. It is suggested to use an impedance matching circuit and have an analog mux to selectively read from the sensors at a high speed.
 
+> **Note**: The files in the `Simulink` [folder](./Simulink/) are for the version **R2017b**. There are more versions in the [versions folder](./Simulink/Versions/).
 
 [![TheProjectsGuy developer shield](https://img.shields.io/badge/Dev-TheProjectsGuy-0061ff.svg)](https://github.com/TheProjectsGuy)
