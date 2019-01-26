@@ -1,6 +1,17 @@
+[![Development status tag](https://img.shields.io/badge/Development%20Status-Milestone%201-red.svg)](./.media/docs/Milestone_Phase1.md)
+
+# Introduction
+This repository is created for the purpose of participation in [IICDC 2018](https://innovate.mygov.in/india-innovation-challenge-design-contest-2018/) (India Innovation Challenge Design Contest). The project details _in short_ are summarized below:
+
+|||
+| ----- | ------ |
+|**Project Name** | Project _SIGHT_ (Smart Infinity Glove using Heuristic Technology) - Transforming the way we live |
+|**Submission ID** | 372888 |
+
+
 # Table of contents
-- [Table of contents](#table-of-contents)
 - [Introduction](#introduction)
+- [Table of contents](#table-of-contents)
   - [About Project](#about-project)
 - [Cloning this project](#cloning-this-project)
   - [Users](#users)
@@ -10,14 +21,6 @@
 - [Folder information](#folder-information)
   - [Visible folders](#visible-folders)
   - [Hidden folders](#hidden-folders)
-
-# Introduction
-This repository is created for the purpose of participation in [IICDC 2018](https://innovate.mygov.in/india-innovation-challenge-design-contest-2018/) (India Innovation Challenge Design Contest). The project details _in short_ are summarized below:
-
-|||
-| ----- | ------ |
-|**Project Name** | Project _SIGHT_ (Smart Infinity Glove using Heuristic Technology) - Transforming the way we live |
-|**Submission ID** | 372888 |
 
 
 ## About Project
