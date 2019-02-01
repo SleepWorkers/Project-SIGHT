@@ -43,6 +43,15 @@ All [Simulink](https://www.mathworks.com/products/simulink.html) files are prese
   - It was moderately good
     ![OpAmp Iteration 2 image](../.media/photos/OpAmp2.png)
   - The output was **0.346 V** in voltage deviation. It is suggested to use an impedance matching circuit and have an analog mux to selectively read from the sensors at a high speed.
+- [FlexSensor_OpAmp3.slx](./Simulink/FlexSensor_OpAmp3.slx): Used an instrumentation amplifier to obtain good results in deviation. The results are acceptable.
+  - Very good results obtained, good enough to move to the next stage.
+    ![OpAmp Iteration 3 image](../.media/photos/OpAmp3.png)
+  - OpAmp output variation as shown below (these are different from the ones shown in the image describing the circuit)
+    ![OpAmp final output readings](../.media/photos/Flex_sensor_instrumentation_amplifier.png)
+    - These readings are for the following inputs (these are different from the ones shown in the image describing the circuit)
+        ![Input values of flex sensor](../.media/photos/Flex_sensor_wheatstone_bridge.png)
+
+The model `FlexSensor_OpAmp3.slx` is selected for further development stages.
 
 > **Note**: The files in the `Simulink` [folder](./Simulink/) are for the version **R2017b**. There are more versions in the [versions folder](./Simulink/Versions/).
 
