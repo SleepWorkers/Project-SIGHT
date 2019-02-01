@@ -50,9 +50,15 @@ All [Simulink](https://www.mathworks.com/products/simulink.html) files are prese
     ![OpAmp final output readings](../.media/photos/Flex_sensor_instrumentation_amplifier.png)
     - These readings are for the following inputs (these are different from the ones shown in the image describing the circuit)
         ![Input values of flex sensor](../.media/photos/Flex_sensor_wheatstone_bridge.png)
+- [Flex_Sensor_final_circuitry.slx](./Simulation/Flex_Sensor_final_circuitry.slx): Used to store the final model.
+  - Model preview
+        ![Model preview](../.media/photos/Simscape_Final_Circuit.png)
+  - Graphs obtained
+        ![Output graphs](../.media/photos/Simulink_final_output_graphs.png)
 
-The model `FlexSensor_OpAmp3.slx` is selected for further development stages.
+The final model is in `Flex_Sensor_final_circuitry.slx`.
 
 > **Note**: The files in the `Simulink` [folder](./Simulink/) are for the version **R2017b**. There are more versions in the [versions folder](./Simulink/Versions/).
 
 [![TheProjectsGuy developer shield](https://img.shields.io/badge/Dev-TheProjectsGuy-0061ff.svg)](https://github.com/TheProjectsGuy)
+[![Spawning issue #16](https://img.shields.io/badge/issue-%2316-f49842.svg)](https://github.com/SleepWorkers/Project-SIGHT/issues/16)
