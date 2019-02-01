@@ -63,7 +63,11 @@ You're strongly suggested to understand items under this note. Please go through
     - All open developers must have a shield like what's shown below (color #0098bf) and it must link to their GitHub profile: 
         
         ![Open Developers shield](https://img.shields.io/badge/Dev-GitHub--Username-0098bf.svg)
-    > **Tip**: You can use [shields.io](https://shields.io/#/) to create developers shields
+    > **Tip**: You can use [shields.io](https://shields.io/#/) to create developer shields
+- If you've applied a patch or have created `README.md` files because of specific issues, please create a shield linking to that issue as well. The format of the shield is as shown below (color #f49842) and it must link to the issue page on GitHub
+    - Here's an example (for issue number 00):
+
+        ![Issue dev shield preview](https://img.shields.io/badge/issue-%2300-f49842.svg)
 - All your work must be well documented. `README.md` files are a good way of creating useful documentation for your work. You're urged to follow [this README template](./README_TEMPLATE.md), just to maintain uniformity.
 - This project follows _pull request_ workflow. Here's a step-by-step briefing of how work is done:
     1. An issue is created using one of the [templates](./ISSUE_TEMPLATE/).

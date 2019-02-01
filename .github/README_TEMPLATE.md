@@ -48,3 +48,4 @@ Acknowledgements (if any) for your work
 If you want to enforce a different license for your work, create a `LICENSE` file in the work folder and mention it here. Else, all licenses default to the licenses of this repository.
 
 [![Developer shield](https://img.shields.io/badge/Dev-TheProjectsGuy-0061ff.svg)](https://github.com/TheProjectsGuy)
+[![Spawning issue tag](https://img.shields.io/badge/issue-%2300-f49842.svg)](./CONTRIBUTING.md)

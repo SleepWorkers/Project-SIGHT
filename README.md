@@ -1,4 +1,5 @@
 [![Development status tag](https://img.shields.io/badge/Development%20Status-Milestone%201-red.svg)](./.media/docs/Milestone_Phase1.md)
+![Open issues badge](https://img.shields.io/github/issues-raw/SleepWorkers/Project-SIGHT.svg?style=social)
 
 # Introduction
 This repository is created for the purpose of participation in [IICDC 2018](https://innovate.mygov.in/india-innovation-challenge-design-contest-2018/) (India Innovation Challenge Design Contest). The project details _in short_ are summarized below:
