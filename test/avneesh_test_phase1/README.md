@@ -4,16 +4,32 @@ All the testing done by [@TheProjectsGuy](https://github.com/TheProjectsGuy) (Av
 # Table of Contents
 - [What is this?](#what-is-this)
 - [Table of Contents](#table-of-contents)
+- [Directory structure](#directory-structure)
+  - [Visible directories](#visible-directories)
+  - [Hidden directories](#hidden-directories)
 - [How to use the tests?](#how-to-use-the-tests)
   - [Windows](#windows)
   - [Ubuntu](#ubuntu)
 
+# Directory structure
+The directory structure is given below
+
+## Visible directories
+| **Directory name** | **Purpose** |
+| --- | --- |
+| [*arduino\_test\_files*](./arduino_test_files/) | Used to store files generated while testing things on the Arduino platform |
+| [*MATLAB\_tests*](./MATLAB_tests/) | MATLAB Files generated |
+
+## Hidden directories
+| **Directory name** | **Purpose** |
+| --- | --- |
+| [*.media*](./.media) | Used to store documentation resources |
 
 # How to use the tests?
 
 ## Windows
 - Open [GitHub Desktop](https://desktop.github.com/) and clone the repository `https://github.com/SleepWorkers/Project-SIGHT.git`.
-    > **Tip**: If you're using SSH, you can use `git@github.com:SleepWorkers/Project-SIGHT.git` instead.
+    > **Tip**: If you're using SSH, you can use `git@github.com:SleepWorkers/Project-SIGHT.git` instead (for the link).
 
 - Checkout the `avneesh-test-phase1` branch.
 - Open the file that you want to inspect using the appropriate application for that file after that.
@@ -38,6 +54,6 @@ Open terminal and type the following:
   - Run the command `simulink` to start simulink.
   - Choose **open** and navigate to the `FlexSensor_voltage_divider.slx` file under `MATLAB_tests/Simulink/FlexSensor_voltage_divider.slx` and the file will be opened.
 
-The exact procedure to open files might be given in the README documents in the directories of this folder.
+The exact procedure to open files and more documentation might be mentioned in the README documents in sub-directories of this folder.
 
 [![TheProjectsGuy developer shield](https://img.shields.io/badge/Dev-TheProjectsGuy-0061ff.svg)](https://github.com/TheProjectsGuy)
