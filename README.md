@@ -1,6 +1,18 @@
+[![Development status tag](https://img.shields.io/badge/Development%20Status-Milestone%201-red.svg)](./.media/docs/Milestone_Phase1.md)
+![Open issues badge](https://img.shields.io/github/issues-raw/SleepWorkers/Project-SIGHT.svg?style=social)
+
+# Introduction
+This repository is created for the purpose of participation in [IICDC 2018](https://innovate.mygov.in/india-innovation-challenge-design-contest-2018/) (India Innovation Challenge Design Contest). The project details _in short_ are summarized below:
+
+|||
+| ----- | ------ |
+|**Project Name** | Project _SIGHT_ (Smart Infinity Glove using Heuristic Technology) - Transforming the way we live |
+|**Submission ID** | 372888 |
+
+
 # Table of contents
-- [Table of contents](#table-of-contents)
 - [Introduction](#introduction)
+- [Table of contents](#table-of-contents)
   - [About Project](#about-project)
 - [Cloning this project](#cloning-this-project)
   - [Users](#users)
@@ -10,14 +22,6 @@
 - [Folder information](#folder-information)
   - [Visible folders](#visible-folders)
   - [Hidden folders](#hidden-folders)
-
-# Introduction
-This repository is created for the purpose of participation in [IICDC 2018](https://innovate.mygov.in/india-innovation-challenge-design-contest-2018/) (India Innovation Challenge Design Contest). The project details _in short_ are summarized below:
-
-|||
-| ----- | ------ |
-|**Project Name** | Project _SIGHT_ (Smart Infinity Glove using Heuristic Technology) - Transforming the way we live |
-|**Submission ID** | 372888 |
 
 
 ## About Project
@@ -87,3 +91,5 @@ Here are the folders available in this project
 |**.media**| Media files used for documentation purposes in the present working directory.|
 
 [![TheProjectsGuy developer shield](https://img.shields.io/badge/Dev-TheProjectsGuy-0061ff.svg)](https://github.com/TheProjectsGuy)
+[![Bharat0404 developer shield](https://img.shields.io/badge/Dev-Bharath0404-0061ff.svg)](https://github.com/bharath0404)
+[![Supaboi21 developer shield](https://img.shields.io/badge/Dev-Supaboi21-0061ff.svg)](https://github.com/supaboi21)
