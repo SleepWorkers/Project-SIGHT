@@ -17,7 +17,7 @@ These tests have used the following MATLAB dependencies.
 | MATLAB | The core MATLAB package | [here](https://in.mathworks.com/products/matlab.html) |
 | Simulink | For simulation purposes | [here](https://in.mathworks.com/products/simulink.html) |
 | Simscape | For simulation of electronic circuits | [here](https://in.mathworks.com/products/simscape.html) |
-| Simscape Electrical | Eectrical simulation | [here](https://in.mathworks.com/products/simscape-electrical.html) |
+| Simscape Electrical | Electrical simulation | [here](https://in.mathworks.com/products/simscape-electrical.html) |
 
 # Folders
 Information about all the folders is present below
