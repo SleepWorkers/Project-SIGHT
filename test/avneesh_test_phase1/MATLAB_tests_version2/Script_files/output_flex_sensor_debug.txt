@@ -1,0 +1,47 @@
+run Flex_sensor_debug.m
+Supply voltage is 5.000000 V
+Resistor values in 'resistor_values' (all in kΩ)
+
+==== Checking diagnostics for 2.2 inch Flex Sensor ====
+Full in: 73.000000 kΩ, Full out: 132.000000 kΩ
+Maximum value for voltage deviation is 0.735001 V, index is 16
+Resistance value suggested is 100.000000 kΩ
+Attach the resistor to the bottom part of voltage divider and flex sensor to top
+Minimum voltage reading (max outwards): 2.155172 V
+Maximum voltage reading (max inwards): 2.890173 V
+
+==== Checking diagnostics for 4.5 inch Flex Sensor ====
+Resistor values are same as above stated
+Full in: 26.000000 kΩ, Full out: 7.500000 kΩ
+Maximum value for voltage deviation is 1.504065 V, index is 10
+Resistance value suggested is 15.000000 kΩ
+Attach the resistor to the upper part of voltage divider and flex sensor to bottom
+Minimum voltage reading (max outwards): 1.666667 V
+Maximum voltage reading (max inwards): 3.170732 V
+
+==== Voltage analysis ====
+Minimum voltage: 1.666667 V, index: 2
+Deviation on 2.2 inch flex sensor: 0.488506 V to 1.223507 V [0.735001 V] (ideal)
+Deviation on 4.5 inch flex sensor: 0.000000 V to 1.504065 V [1.504065 V] (ideal)
+ ---- Voltage divider side arm definition & new voltages ---- 
+Upper resistor is 6.800000 kΩ, lower resistor is 3.300000 kΩ
+Voltage obtained here: 1.633663 V -> 'From resistor_div_mat1(4, 7)'
+Deviation on 2.2 inch flex sensor: 0.521509 V to 1.256510 V [0.735001 V] (actual)
+Deviation on 4.5 inch flex sensor: 0.033003 V to 1.537068 V [1.504065 V] (actual)
+
+==== OpAmp analysis ====
+Maximum deviation voltage is 1.537068 V, scaling upto 4.95 V
+Scaling factor is 3.220416 (ideal)
+Deviation on 2.2 inch flex sensor: 1.679476 V to 4.046485 V (ideal final output)
+Deviation of 2.2 inch flex Sensor: 2.367009 V (ideal) 
+Deviation on 4.5 inch flex sensor: 0.106284 V to 4.950000 V (ideal final output)
+Deviation of 4.5 inch flex Sendor: 4.843716 V (ideal) 
+ ---- Final output voltages ---- 
+Forward resistor: 150.000000 kΩ
+Backward resistor: 47.000000 kΩ
+This will give the scaling factor: 3.191489 (actual) -> From 'resistor_div_mat2(17, 13)'
+Deviation on 2.2 inch flex sensor: 1.664391 V to 4.010138 V (actual final output)
+Deviation of 2.2 inch flex Sensor: 2.345748 V (actual) 
+Deviation on 4.5 inch flex sensor: 0.105330 V to 4.905537 V (actual final output)
+Deviation of 4.5 inch flex Sendor: 4.800208 V (actual) 
+diary off
