@@ -1,5 +1,7 @@
 # What is this ?
-All MATLAB test files are stored in this directory
+All MATLAB test files in version 1 are stored in this directory
+
+:warning: This version has been discontinued, please check Version 2. More information [here](https://github.com/SleepWorkers/Project-SIGHT/issues/16#issuecomment-460722749) :warning:
 
 # Table of contents
 - [What is this ?](#what-is-this)
@@ -22,7 +24,7 @@ These tests have used the following MATLAB dependencies.
 # Folders
 Information about all the folders is present below
 
-## Simulink Files
+## [Simulink Files](./Simulink/)
 All [Simulink](https://www.mathworks.com/products/simulink.html) files are present below:
 
 ### Flex Sensor
