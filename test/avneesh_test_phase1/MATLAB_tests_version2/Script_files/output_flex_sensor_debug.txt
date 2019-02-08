@@ -1,4 +1,3 @@
-run Flex_sensor_debug.m
 Supply voltage is 5.000000 V
 Resistor values in 'resistor_values' (all in kΩ)
 
