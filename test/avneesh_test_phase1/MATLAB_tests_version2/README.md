@@ -32,6 +32,10 @@ All the script files for testing are written here
 
 ### Flex Sensor
 - [Flex_sensor_debug.m](./Script_files/Flex_sensor_debug.m): Debugger code written for flex sensor circuit generation. It can predict what are the resistance values to be used for the circuit under the optimal solution. The output is in text, stored in the file [output_flex_sensor_debug.txt](./Script_files/output_flex_sensor_debug.txt).
+- [output_flex_sensor_debug.txt](./Script_files/output_flex_sensor_debug.txt): Output of the code in [Flex_sensor_debug.m](./Script_files/Flex_sensor_debug.m). This is obtained by running the following command in MATLAB command window (pwd is the [Script_files](./Script_files/) folder):
+    ```bash
+    run Flex_sensor_debug.m
+    ```
 
 ## [Simulink Files](./Simulink/)
 All [Simulink](https://www.mathworks.com/products/simulink.html) files are present below:
