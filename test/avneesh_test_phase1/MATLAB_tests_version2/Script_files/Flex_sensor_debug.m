@@ -4,11 +4,12 @@ clc;clearvars;close all;
 V_supply = 5;
 fprintf("Supply voltage is %f V\n", V_supply);
 fprintf("Resistor values in 'resistor_values' (all in kΩ)\n");
+% List of resistance values
 resistor_values = [1 1.5 2.2 3.3 4.7 5.6 6.8 8.2 10 15 22 33 47 56 68 100 150 220 330 470];
 %% 2.2 inch Flex Sensor
 fprintf("\n==== Checking diagnostics for 2.2 inch Flex Sensor ====\n");
-min_R1 = 73;    % in
-max_R1 = 132;   % out
+min_R1 = 73;    % clentched in
+max_R1 = 132;   % clentched out
 fprintf("Full in: %f kΩ, Full out: %f kΩ\n", min_R1, max_R1);
 res_range = @(x) V_supply * (x/(x+min_R1) - x/(x+max_R1));
 dev_values1 = arrayfun(res_range, resistor_values);
