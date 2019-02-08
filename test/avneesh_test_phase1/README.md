@@ -20,11 +20,13 @@ The directory structure is given below
 | [*arduino\_test\_files*](./arduino_test_files/) | Used to store files generated while testing things on the Arduino platform |
 | [*MATLAB\_tests\_version1*](./MATLAB_tests_version1/) | MATLAB Files generated for first test iteration (see [this issue](https://github.com/SleepWorkers/Project-SIGHT/issues/16#issuecomment-460722749)) |
 | [*MATLAB\_tests\_version2*](./MATLAB_tests_version2/) | MATLAB Files generated for second test iteration (see [this issue](https://github.com/SleepWorkers/Project-SIGHT/issues/16#issuecomment-460722749)) |
+| [*Electronic_CAD_files*](./Electronic_CAD_files/) | Electronic CAD Files generated |
+
 
 ## Hidden directories
 | **Directory name** | **Purpose** |
 | --- | --- |
-| [*.media*](./.media) | Used to store documentation resources |
+| [*.media*](./.media) | Used to store documentation related resources |
 
 # How to use the tests?
 
