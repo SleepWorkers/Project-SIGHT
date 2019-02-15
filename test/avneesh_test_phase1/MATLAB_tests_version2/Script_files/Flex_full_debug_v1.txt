@@ -1,0 +1,239 @@
+clc;clearvars;close all;
+Flex_full_debug_v1
+======= Initializing the system ======= 
+Trying to read the files :
+- resistor_vals.mat: For resistance values in variable resistor_values
+- sensor_readings.mat: For 'finger_names', 'full_in_flex' and 'full_out_flex'
+The voltage supply is 5.000000 V to 0 V
+The resistance values available are the following (everything in kΩ)
+    <strong>Resistance_kohm</strong>
+    <strong>_______________</strong>
+
+      1            
+    1.5            
+    2.2            
+    3.3            
+    4.7            
+    5.6            
+    6.8            
+    8.2            
+     10            
+     15            
+     22            
+     33            
+     47            
+     56            
+     68            
+    100            
+    150            
+    220            
+    330            
+    470            
+
+Data values (all resistances in kΩ)
+    <strong> finger_name  </strong><strong>    flex_in_kohm</strong><strong>    flex_out_kohm</strong>
+    <strong>______________</strong>    <strong>____________</strong>    <strong>_____________</strong>
+
+    "Thumb"           73              132          
+    "Index Finger"    26              7.5          
+
+======= Voltage divider analysis ========
+The flex sensors are either 'above' or 'below' in the voltage divider
+# Analying finger 1 - Thumb
+Flex out resistance is greater, resistance decreases while bending inwards, flex sensor 'above'
+Deviation in voltage range: 
+    @(res)vs*(res/(min_r+res)-res/(max_r+res))
+
+# Analying finger 2 - Index Finger
+Flex in resistance is greater, resistance increases while bending inwards, flex sensor 'below'
+Deviation in voltage range: 
+    @(res)vs*(max_r/(max_r+res)-min_r/(min_r+res))
+
+Data values (all resistances in kΩ)
+    <strong> finger_name  </strong><strong>    flex_in_kohm</strong><strong>    flex_out_kohm</strong><strong>    above_pos</strong><strong>    r1_kohm</strong><strong>    min_v_raw</strong><strong>    max_v_raw</strong><strong>    dev_v_raw</strong>
+    <strong>______________</strong>    <strong>____________</strong>    <strong>_____________</strong>    <strong>_________</strong>    <strong>_______</strong>    <strong>_________</strong>    <strong>_________</strong>    <strong>_________</strong>
+
+    "Thumb"           73              132              1            100        2.1552       2.8902        0.735   
+    "Index Finger"    26              7.5              0             15        1.6667       3.1707       1.5041   
+
+======= Wheatstone bridge side arm analysis ========
+Minimum voltage in the main arm is 1.666667 V
+Voltage divider equation is: 
+    @(r_up,r_dw)vs*r_dw/(r_up+r_dw)
+
+Best resistor pairs found
+Upper resistance R3 = 6.800000 kΩ and lower resistance R4 = 3.300000 kΩ
+Voltage due to this is 1.633663 V
+Data values (all resistances in kΩ)
+dv -> Differential Voltage
+    <strong> finger_name  </strong><strong>    above_pos</strong><strong>     min_dv </strong><strong>    max_dv</strong><strong>    dev_dv</strong>
+    <strong>______________</strong>    <strong>_________</strong>    <strong>________</strong>    <strong>______</strong>    <strong>______</strong>
+
+    "Thumb"           1             0.52151    1.2565     0.735
+    "Index Finger"    0            0.033003    1.5371    1.5041
+
+======= Instrumentation Amplifier analysis ========
+The maximum output range is 0 V to 4.950000 V
+The maximum possible differential input voltage is 1.537068 V
+The desired gain is 3.220416
+The resistors chosen are Rf = 150.000000 kΩ and Rb = 47.000000 kΩ
+Giving a gain of 3.191489 = (Rf / Rb) 
+Data values (all resistances in kΩ)
+v3 -> output voltage of the entire circuitry 
+    <strong> finger_name  </strong><strong>    above_pos</strong><strong>     min_dv </strong><strong>    max_dv</strong><strong>    dev_dv</strong><strong>    min_v3 </strong><strong>    max_v3</strong><strong>    dev_v3</strong>
+    <strong>______________</strong>    <strong>_________</strong>    <strong>________</strong>    <strong>______</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>______</strong>    <strong>______</strong>
+
+    "Thumb"           1             0.52151    1.2565     0.735     1.6644    4.0101    2.3457
+    "Index Finger"    0            0.033003    1.5371    1.5041    0.10533    4.9055    4.8002
+
+
+
+==================== FINAL RESULTS ====================
+Data values (all resistances in kΩ)
+R1 -> Resistor in the same arm as the sensor, in kΩ
+v1 -> Raw voltage (of the voltage divider), in V
+v2 -> Output of differential voltage from wheatstone bridge, in V
+v3 -> Output of instrumentation amplifier (final output), in V
+All details here
+    <strong> finger_name  </strong><strong>    flex_in_kohm</strong><strong>    flex_out_kohm</strong><strong>    above_pos</strong><strong>    r1_kohm</strong><strong>    min_v1</strong><strong>    max_v1</strong><strong>    del_v1</strong><strong>     min_v2 </strong><strong>    max_v2</strong><strong>    del_v2</strong><strong>    min_v3 </strong><strong>    max_v3</strong><strong>    del_v3</strong>
+    <strong>______________</strong>    <strong>____________</strong>    <strong>_____________</strong>    <strong>_________</strong>    <strong>_______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>________</strong>    <strong>______</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>______</strong>    <strong>______</strong>
+
+    "Thumb"           73              132              "above"      100        2.1552    2.8902     0.735     0.52151    1.2565     0.735     1.6644    4.0101    2.3457
+    "Index Finger"    26              7.5              "below"       15        1.6667    3.1707    1.5041    0.033003    1.5371    1.5041    0.10533    4.9055    4.8002
+
+Breif here
+            <strong> finger_name  </strong><strong>    flex_in_kohm</strong><strong>    flex_out_kohm</strong><strong>    above_pos</strong><strong>    r1_kohm</strong><strong>    min_v3 </strong><strong>    max_v3</strong><strong>    del_v3</strong>
+            <strong>______________</strong>    <strong>____________</strong>    <strong>_____________</strong>    <strong>_________</strong>    <strong>_______</strong>    <strong>_______</strong>    <strong>______</strong>    <strong>______</strong>
+
+    <strong>2.2"</strong>    "Thumb"           73              132              "above"      100         1.6644    4.0101    2.3457
+    <strong>4.5"</strong>    "Index Finger"    26              7.5              "below"       15        0.10533    4.9055    4.8002
+
+Side arm resistances: 
+	Upper (R3) = 6.800000 kΩ 
+	Lower (R4) = 3.300000 kΩ
+Instrumentation amplifier reistances: 
+	Forward resistance (Rf) = 150.000000 kΩ 
+	Backward resistance (Rb) = 47.000000 kΩ
+diary off
+clc;clearvars;close all;
+Flex_full_debug_v1
+======= Initializing the system ======= 
+Trying to read the files :
+- resistor_vals.mat: For resistance values in variable resistor_values
+- sensor_readings.mat: For 'flex_sizes', 'finger_names', 'supply_voltage', 'full_in_flex' and 'full_out_flex'
+The voltage supply is 5.000000 V to 0 V
+The resistance values available are the following (everything in kΩ)
+    <strong>Resistance_kohm</strong>
+    <strong>_______________</strong>
+
+      1            
+    1.5            
+    2.2            
+    3.3            
+    4.7            
+    5.6            
+    6.8            
+    8.2            
+     10            
+     15            
+     22            
+     33            
+     47            
+     56            
+     68            
+    100            
+    150            
+    220            
+    330            
+    470            
+
+Data values (all resistances in kΩ)
+    <strong> finger_name  </strong><strong>    flex_in_kohm</strong><strong>    flex_out_kohm</strong>
+    <strong>______________</strong>    <strong>____________</strong>    <strong>_____________</strong>
+
+    "Thumb"           73              132          
+    "Index Finger"    26              7.5          
+
+======= Voltage divider analysis ========
+The flex sensors are either 'above' or 'below' in the voltage divider
+# Analying finger 1 - Thumb
+Flex out resistance is greater, resistance decreases while bending inwards, flex sensor 'above'
+Deviation in voltage range: 
+    @(res)vs*(res/(min_r+res)-res/(max_r+res))
+
+# Analying finger 2 - Index Finger
+Flex in resistance is greater, resistance increases while bending inwards, flex sensor 'below'
+Deviation in voltage range: 
+    @(res)vs*(max_r/(max_r+res)-min_r/(min_r+res))
+
+Data values (all resistances in kΩ)
+    <strong> finger_name  </strong><strong>    flex_in_kohm</strong><strong>    flex_out_kohm</strong><strong>    above_pos</strong><strong>    r1_kohm</strong><strong>    min_v_raw</strong><strong>    max_v_raw</strong><strong>    dev_v_raw</strong>
+    <strong>______________</strong>    <strong>____________</strong>    <strong>_____________</strong>    <strong>_________</strong>    <strong>_______</strong>    <strong>_________</strong>    <strong>_________</strong>    <strong>_________</strong>
+
+    "Thumb"           73              132              1            100        2.1552       2.8902        0.735   
+    "Index Finger"    26              7.5              0             15        1.6667       3.1707       1.5041   
+
+======= Wheatstone bridge side arm analysis ========
+Minimum voltage in the main arm is 1.666667 V
+Voltage divider equation is: 
+    @(r_up,r_dw)vs*r_dw/(r_up+r_dw)
+
+Best resistor pairs found
+Upper resistance R3 = 6.800000 kΩ and lower resistance R4 = 3.300000 kΩ
+Voltage due to this is 1.633663 V
+Effectiveness = 98.019802 % 
+Data values (all resistances in kΩ)
+dv -> Differential Voltage
+    <strong> finger_name  </strong><strong>    above_pos</strong><strong>     min_dv </strong><strong>    max_dv</strong><strong>    dev_dv</strong>
+    <strong>______________</strong>    <strong>_________</strong>    <strong>________</strong>    <strong>______</strong>    <strong>______</strong>
+
+    "Thumb"           1             0.52151    1.2565     0.735
+    "Index Finger"    0            0.033003    1.5371    1.5041
+
+======= Instrumentation Amplifier analysis ========
+The maximum output range is 0 V to 4.950000 V
+The maximum possible differential input voltage is 1.537068 V
+The desired gain is 3.220416
+The resistors chosen are Rf = 150.000000 kΩ and Rb = 47.000000 kΩ
+Giving a gain of 3.191489 = (Rf / Rb) 
+Effectiveness = 99.101763 % 
+Data values (all resistances in kΩ)
+v3 -> output voltage of the entire circuitry 
+    <strong> finger_name  </strong><strong>    above_pos</strong><strong>     min_dv </strong><strong>    max_dv</strong><strong>    dev_dv</strong><strong>    min_v3 </strong><strong>    max_v3</strong><strong>    dev_v3</strong>
+    <strong>______________</strong>    <strong>_________</strong>    <strong>________</strong>    <strong>______</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>______</strong>    <strong>______</strong>
+
+    "Thumb"           1             0.52151    1.2565     0.735     1.6644    4.0101    2.3457
+    "Index Finger"    0            0.033003    1.5371    1.5041    0.10533    4.9055    4.8002
+
+
+
+==================== FINAL RESULTS ====================
+Data values (all resistances in kΩ)
+R1 -> Resistor in the same arm as the sensor, in kΩ
+v1 -> Raw voltage (of the voltage divider), in V
+v2 -> Output of differential voltage from wheatstone bridge, in V
+v3 -> Output of instrumentation amplifier (final output), in V
+All details here
+    <strong> finger_name  </strong><strong>    flex_in_kohm</strong><strong>    flex_out_kohm</strong><strong>    above_pos</strong><strong>    r1_kohm</strong><strong>    min_v1</strong><strong>    max_v1</strong><strong>    del_v1</strong><strong>     min_v2 </strong><strong>    max_v2</strong><strong>    del_v2</strong><strong>    min_v3 </strong><strong>    max_v3</strong><strong>    del_v3</strong>
+    <strong>______________</strong>    <strong>____________</strong>    <strong>_____________</strong>    <strong>_________</strong>    <strong>_______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>______</strong>    <strong>________</strong>    <strong>______</strong>    <strong>______</strong>    <strong>_______</strong>    <strong>______</strong>    <strong>______</strong>
+
+    "Thumb"           73              132              "above"      100        2.1552    2.8902     0.735     0.52151    1.2565     0.735     1.6644    4.0101    2.3457
+    "Index Finger"    26              7.5              "below"       15        1.6667    3.1707    1.5041    0.033003    1.5371    1.5041    0.10533    4.9055    4.8002
+
+Breif here
+            <strong> finger_name  </strong><strong>    flex_in_kohm</strong><strong>    flex_out_kohm</strong><strong>    above_pos</strong><strong>    r1_kohm</strong><strong>    min_v3 </strong><strong>    max_v3</strong><strong>    del_v3</strong>
+            <strong>______________</strong>    <strong>____________</strong>    <strong>_____________</strong>    <strong>_________</strong>    <strong>_______</strong>    <strong>_______</strong>    <strong>______</strong>    <strong>______</strong>
+
+    <strong>2.2"</strong>    "Thumb"           73              132              "above"      100         1.6644    4.0101    2.3457
+    <strong>4.5"</strong>    "Index Finger"    26              7.5              "below"       15        0.10533    4.9055    4.8002
+
+Side arm resistances: 
+	Upper (R3) = 6.800000 kΩ 
+	Lower (R4) = 3.300000 kΩ
+	Effectiveness = 98.019802 %
+Instrumentation amplifier reistances: 
+	Forward resistance (Rf) = 150.000000 kΩ 
+	Backward resistance (Rb) = 47.000000 kΩ
+	Effectiveness = 99.101763 %
+Total effectiveness = 97.139352 %
+diary off;
