@@ -36,6 +36,7 @@ All the script files for testing are written here
     ```bash
     run Flex_sensor_debug.m
     ```
+- [Flex_full_debug_v1.m](./Script_files/Flex_full_debug_v1.m): The second version of the circuit generator. Give it resistance ranges and it'll given you everything about the circuit.
 
 ## [Simulink Files](./Simulink/)
 All [Simulink](https://www.mathworks.com/products/simulink.html) files are present below:
