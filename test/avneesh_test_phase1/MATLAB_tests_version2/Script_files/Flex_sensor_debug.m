@@ -4,7 +4,7 @@ clc;clearvars;close all;
 V_supply = 5;
 fprintf("Supply voltage is %f V\n", V_supply);
 fprintf("Resistor values in 'resistor_values' (all in kΩ)\n");
-% List of resistance values
+% List of resistance values in k ohm
 resistor_values = [1 1.5 2.2 3.3 4.7 5.6 6.8 8.2 10 15 22 33 47 56 68 100 150 220 330 470];
 %% 2.2 inch Flex Sensor
 fprintf("\n==== Checking diagnostics for 2.2 inch Flex Sensor ====\n");
