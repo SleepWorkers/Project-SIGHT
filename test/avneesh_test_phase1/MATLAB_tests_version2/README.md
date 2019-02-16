@@ -37,6 +37,7 @@ All the script files for testing are written here
     run Flex_sensor_debug.m
     ```
 - [Flex_full_debug_v1.m](./Script_files/Flex_full_debug_v1.m): The second version of the circuit generator. Give it resistance ranges and it'll given you everything about the circuit.
+- [Final_flex_calculator.m](./Script_files/Final_flex_calculator.m): The final file for flex sensor testing.
 
 ## [Simulink Files](./Simulink/)
 All [Simulink](https://www.mathworks.com/products/simulink.html) files are present below:
@@ -52,6 +53,7 @@ All [Simulink](https://www.mathworks.com/products/simulink.html) files are prese
   - Results match what the script had predicted
     ![2.2 inch op-amp version](./../.media/photos/Version22_FlexSensor_2in2_wheatstone.png)
     - Op-Amp implementation (instrumentation amplifier)
+    - Updated with the [Final_flex_calculator.m](./Script_files/Final_flex_calculator.m)
     - Final circuitry for the 2.2 inch flex sensor
 
 #### 4.5 Inch
@@ -64,8 +66,14 @@ All [Simulink](https://www.mathworks.com/products/simulink.html) files are prese
   - Results match what the script had predicted
     ![4.5 inch op-amp version](./../.media/photos/Version22_FlexSensor_4in5_wheatstone.png)
     - Op-Amp implementation (instrumentation amplifier)
+    - Updated with the [Final_flex_calculator.m](./Script_files/Final_flex_calculator.m)
     - Final circuitry for the 4.5 inch flex sensor
 
 
-[![TheProjectsGuy developer shield](https://img.shields.io/badge/Dev-TheProjectsGuy-0061ff.svg)](https://github.com/TheProjectsGuy)
-[![Spawning issue #16](https://img.shields.io/badge/issue-%2316-f49842.svg)](https://github.com/SleepWorkers/Project-SIGHT/issues/16)
+[![TheProjectsGuy developer shield][dev_shield]][dev_profile]
+[![Spawning issue #16][issue_shield]][issue_link]
+
+[dev_shield]:https://img.shields.io/badge/Dev-TheProjectsGuy-0061ff.svg
+[dev_profile]:https://github.com/TheProjectsGuy
+[issue_shield]:https://img.shields.io/badge/issue-%2316-f49842.svg
+[issue_link]:https://github.com/SleepWorkers/Project-SIGHT/issues/16
