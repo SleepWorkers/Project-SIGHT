@@ -5,7 +5,7 @@ All MATLAB test files in version 2 are stored in this directory
 - [What is this ?](#what-is-this)
 - [Table of contents](#table-of-contents)
 - [Dependencies](#dependencies)
-- [Folders](#folders)
+- [Folders and files](#folders-and-files)
   - [Script Files](#script-files)
     - [Flex Sensor](#flex-sensor)
   - [Simulink Files](#simulink-files)
@@ -24,7 +24,7 @@ These tests have used the following MATLAB dependencies.
 | Simscape Electrical | Electrical simulation | [here](https://in.mathworks.com/products/simscape-electrical.html) |
 
 
-# Folders
+# Folders and files
 Information about all the folders is present below
 
 ## [Script Files](./Script_files/)
