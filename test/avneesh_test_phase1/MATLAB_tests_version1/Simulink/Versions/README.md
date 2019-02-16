@@ -22,3 +22,8 @@ Some MATLAB installations aren't rendering the _ohm_ character (which looks like
 
 ## Module not existing
 A few models used might not be available on older version of MATLAB, in case they're not important, then please remove them, or [create an issue](https://github.com/SleepWorkers/Project-SIGHT/issues/new?template=feature_request.md) and we'll look into it.
+
+The edit field functionality in Simulink doesn't exist in MATLAB 2016b or below, so the files depending upon that are not ported.
+
+[![TheProjectsGuy developer shield](https://img.shields.io/badge/Dev-TheProjectsGuy-0061ff.svg)](https://github.com/TheProjectsGuy)
+

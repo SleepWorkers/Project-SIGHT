@@ -1,5 +1,7 @@
 # What is this ?
-All MATLAB test files are stored in this directory
+All MATLAB test files in version 1 are stored in this directory
+
+:warning: This version has been discontinued, please check Version 2. More information [here](https://github.com/SleepWorkers/Project-SIGHT/issues/16#issuecomment-460722749) :warning:
 
 # Table of contents
 - [What is this ?](#what-is-this)
@@ -17,12 +19,12 @@ These tests have used the following MATLAB dependencies.
 | MATLAB | The core MATLAB package | [here](https://in.mathworks.com/products/matlab.html) |
 | Simulink | For simulation purposes | [here](https://in.mathworks.com/products/simulink.html) |
 | Simscape | For simulation of electronic circuits | [here](https://in.mathworks.com/products/simscape.html) |
-| Simscape Electrical | Eectrical simulation | [here](https://in.mathworks.com/products/simscape-electrical.html) |
+| Simscape Electrical | Electrical simulation | [here](https://in.mathworks.com/products/simscape-electrical.html) |
 
 # Folders
 Information about all the folders is present below
 
-## Simulink Files
+## [Simulink Files](./Simulink/)
 All [Simulink](https://www.mathworks.com/products/simulink.html) files are present below:
 
 ### Flex Sensor
@@ -50,11 +52,8 @@ All [Simulink](https://www.mathworks.com/products/simulink.html) files are prese
     ![OpAmp final output readings](../.media/photos/Flex_sensor_instrumentation_amplifier.png)
     - These readings are for the following inputs (these are different from the ones shown in the image describing the circuit)
         ![Input values of flex sensor](../.media/photos/Flex_sensor_wheatstone_bridge.png)
-- [Flex_Sensor_final_circuitry.slx](./Simulation/Flex_Sensor_final_circuitry.slx): Used to store the final model.
-  - Model preview
-        ![Model preview](../.media/photos/Simscape_Final_Circuit.png)
-  - Graphs obtained
-        ![Output graphs](../.media/photos/Simulink_final_output_graphs.png)
+- [FlexSensor_Customizable_2in2.slx](./Simulink/FlexSensor_Customizable_2in2.slx): Made a customizable circuit design for the 2.2" flex sensor (for thumb circuitry only).
+    ![Customizable 2.2in flex sensor circuitry](../.media/photos/FlexSensor_2in2_custom.png)
 
 The final model is in `Flex_Sensor_final_circuitry.slx`.
 

@@ -2,7 +2,7 @@
 
 :pray::thumbsup: First off, thanks for taking the time to contribute! :thumbsup::pray:
 
-The following are the guidelines for contributing to Project SIGHT and it's various packages, which are hosted in the [Sleep Workers Organization](https://github.com/SleepWorkers) on GitHub. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
+The following are the guidelines for contributing to Project SIGHT and it's various packages, which are hosted under the [Sleep Workers Organization](https://github.com/SleepWorkers) (interchangeably referred to as _Advanced Intelligent Robotics_) on GitHub. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
 # Table of Contents
 - [Contributing to Project SIGHT](#contributing-to-project-sight)
@@ -77,7 +77,7 @@ You're strongly suggested to understand items under this note. Please go through
     4. Changes are pushed to the branch
     5. Step 3 and 4 are repeated till the issue is solved and is tested.
     6. A pull request is made to the _dev_ branch. 
-       > **Note**: Make sure that `dev` branch is the base branch, _not_ `master`.
+       > **Note**: Make sure that `dev` branch is the base branch in the pull request, _not_ the `master` branch.
     7. After the pull request is approved and merge is successful, the branch may be deleted.
 - Throughout development process, developers test the work on `dev` branch in regular intervals. If an agreement is made, a pull request to `master` is created. This way, `master` always has the _working_ and _tested_ version of the project.
 
