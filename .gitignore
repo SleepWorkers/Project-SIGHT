@@ -1,1 +1,4 @@
 # All the files that should be ignored by git should be added here
+# Ignore JetBrains `.idea` files
+.idea
+
