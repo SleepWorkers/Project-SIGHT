@@ -1,2 +1,4 @@
 # Ignore the test folder
 test/
+# Ignore folders created by PyCharm
+.idea/
