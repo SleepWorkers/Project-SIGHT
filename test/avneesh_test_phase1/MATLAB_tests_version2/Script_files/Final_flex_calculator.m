@@ -1,3 +1,11 @@
+% Author: Avneesh Mishra
+% Purpose: To get the resistance values to be used for flex sensor
+% circuitry. This tool essentially gives you all the resistance values to
+% be used in the circuit implementation for the best results.
+% Instruction to use:
+%    TODO: Work here
+%    If you're freshly getting values, create resistor_vals.mat and
+%    sensor_readings.mat matrices 
 %% Setup section
 clc;clearvars;close all;
 %% Data initialization
