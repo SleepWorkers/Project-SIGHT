@@ -1,0 +1,4 @@
+# ---- Ignore test files ----
+# Microcontroller test files
+uC_test_files/
+
