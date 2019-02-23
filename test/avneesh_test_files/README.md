@@ -13,7 +13,8 @@ Here's information about the folders present in this directory
 | [**cv_algo**](./cv_algo/) | All Computer vision related codes |
 | [*TI_CC3220SF_WiFi_MCU*](./TI_CC3220SF_WiFi_MCU/) | All the codes related only to CC3220SF Launch XL |
 | [*Eagle_CAD*](./Eagle_CAD/) | Eagle CAD files |
-| [*uC_test_files*](./uC_test_files/) | Test files for microcontrollers |
+| [*Arduino_codes*](/Arduino_codes/) | Arduino test codes (just if you need an alternative) |
+| [*MATLAB_scripts*](./MATLAB_scripts/) | MATLAB Script files used |
 
 [![TheProjectsGuy developer shield][TheProjectsGuy-dev-shield]][TheProjectsGuy-dev-profile]
 
