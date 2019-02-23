@@ -6,7 +6,7 @@ note: ../Camera_tools/images/captured_image1.jpg contains RED color LEDs
 """
 import cv2 as cv
 # Location of the file to be read and read image
-image_location = "../Camera_tools/images/captured_image1.jpg"
+image_location = "../Camera_tools/images/captured_image2.jpg"
 img = cv.imread(image_location)
 # Grayscale conversion
 img_gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
@@ -36,7 +36,7 @@ cv.createTrackbar("Threshold", "Settings", 0, 255, threshChangeTo)
 while True:
     cv.imshow("Image", img)
     cv.imshow("Image Gray", img_gray)
-
+    # TODO: Add thresholding code
     key = cv.waitKey(1) & 0xFF
     if key == ord('q'):
         break
