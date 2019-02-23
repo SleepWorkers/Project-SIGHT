@@ -8,9 +8,14 @@ This is the testing directory of TI LaunchPad CC3220SF EVM Kit. All the codes wr
 - [Softwares used](#softwares-used)
   - [Energia](#energia)
     - [Getting Started](#getting-started)
+    - [Examples](#examples)
+  - [Code Composer Studio](#code-composer-studio)
+  - [TI Cloud Tools](#ti-cloud-tools)
 - [Resources](#resources)
   - [CC3220SF LaunchPad](#cc3220sf-launchpad)
   - [Energia](#energia-1)
+  - [Code Composer Studio](#code-composer-studio-1)
+  - [TI Cloud Tools](#ti-cloud-tools-1)
 
 # Files and Folders
 
@@ -31,10 +36,35 @@ To get started, do the following
 - Connect the board, select the correct port and board under **Tools** -> **Board** and **Port**
 - Upload the code under **File** -> **Examples** -> **01. Basics** -> **Blink** and see the results.
   - The red LED at D10 (bottom right of the board) must start blinking.
-- Next, open a new window and try the [Blinks.ino](./Blinks/Blinks.ino) code. Upload it, and open the serial monitor when done.
+- Next, open a new window and try the [Blinks.ino][Energia-Examples-Blinks] code. Upload it, and open the serial monitor when done. There are more examples, check the examples section for all of them.
 
 The pinout of the board can be found in the resources section
 [![Energia Pinout](../.media/photos/CC3220SF-LAUNCHXL-Energia_pinout.jpg)](https://energia.nu/pinmaps/cc3220sf-launchxl/)
+
+### Examples
+Here are all the example codes
+| **Code Name** | **Purpose** |
+| ---- | ---- |
+| [Blinks][Energia-Examples-Blinks] | To cycle between the three color LEDs and printing out messages on a serial monitor |
+
+[Energia-Examples-Blinks]: ./Energia_examples/Blinks/Blinks.ino
+
+## Code Composer Studio
+We've also used Code Composer Studio to program the board. In order to do the same, please follow the following steps:
+1. Download and install the latest version of Code Composer Studio (links in the [resources section of this page](#code-composer-studio-1))
+2. _Launch_ the Code Composer Studio application. It is suggested that you maintain a different workspace for this application.
+3. Open the _Resource Explorer_. This can be found under **View** -> **Resource Explorer**.
+4. Search for `CC3220SF LaunchPad`.
+5. Download and install the following _Software_:
+    - SimpleLink CC32xx SDK -v*
+    - SimpleLink SDK Plugins
+    - Energia
+6. Restart Code Composer Studio after all the software has been set up.
+
+
+
+## TI Cloud Tools
+The TI Cloud tools are available at [this](https://dev.ti.com/) website. Once you reach there, you may be asked to install the TI Cloud Agent. It is important so that the website can interface with the board connected.
 
 # Resources
 ## CC3220SF LaunchPad
@@ -68,6 +98,15 @@ The pinout of the board can be found in the resources section
     - [MacOS](http://energia.nu/guide/install/macos/)
     - [Windows](http://energia.nu/guide/install/windows/)
 - **Libraries**: [Core Libraries](http://energia.nu/guide/libraries/)
+
+## Code Composer Studio
+- **Official Website**: [TI/CCSTUDIO](http://www.ti.com/tool/CCSTUDIO)
+- **Download**: [TI/CCSTUDIO/Download](http://processors.wiki.ti.com/index.php/Download_CCS)
+
+
+
+## TI Cloud Tools
+- **Official Website**: [dev.ti.com](https://dev.ti.com/)
 
 [![TheProjectsGuy developer shield][TheProjectsGuy-dev-shield]][TheProjectsGuy-dev-profile]
 
