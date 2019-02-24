@@ -9,6 +9,7 @@ This is the testing directory of TI LaunchPad CC3220SF EVM Kit. All the codes wr
   - [Energia](#energia)
     - [Getting Started](#getting-started)
     - [Examples](#examples)
+    - [Codes](#codes)
   - [Code Composer Studio](#code-composer-studio)
   - [TI Cloud Tools](#ti-cloud-tools)
 - [Resources](#resources)
@@ -18,6 +19,7 @@ This is the testing directory of TI LaunchPad CC3220SF EVM Kit. All the codes wr
   - [TI Cloud Tools](#ti-cloud-tools-1)
 
 # Files and Folders
+This information can be perceived from further sections of this page.
 
 # Softwares used
 We've used the following software for our application
@@ -43,11 +45,19 @@ The pinout of the board can be found in the resources section
 
 ### Examples
 Here are all the example codes
+
 | **Code Name** | **Purpose** |
 | ---- | ---- |
 | [Blinks][Energia-Examples-Blinks] | To cycle between the three color LEDs and printing out messages on a serial monitor |
 
 [Energia-Examples-Blinks]: ./Energia_examples/Blinks/Blinks.ino
+
+### Codes
+The actual codes used for this project are listed here. They're stored in a separate folder named [**Energia**](./Energia/)
+
+| **File Name** | **Purpose** |
+| ---- | ---- |
+| [*Final_code.ino*](./Energia/Final_code.ino) | The final code to be uploaded to the microcontroller for **data capturing session** |
 
 ## Code Composer Studio
 We've also used Code Composer Studio to program the board. In order to do the same, please follow the following steps:

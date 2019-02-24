@@ -8,6 +8,7 @@ This is the directory for all the MATLAB script files under the parent directory
 
 # Files
 The important files are as follows:
+
 | **File Name** | **Comments** |
 | ---- | ---- |
 | [*Final\_flex\_calculator.m*](./Final_flex_calculator.m) | This file is the exact copy of the file in test\_phase\_1. In fact, it maintains a hard link to the file |

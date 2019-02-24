@@ -31,6 +31,7 @@ We've used the following python libraries:
 Let's explore the files and folders in detail
 ## [Camera_tools](./Camera_tools/)
 Used to deal with camera (mainly). It has the following files:
+
 | **File Name** | **Purpose** | 
 | ---- | ---- |
 | [*Camera\_config.py*](./Camera_tools/Camera_config.py) | Used to configure settings of a webcam for further purposes of this tutorial |
@@ -43,6 +44,7 @@ This folder also has the following subfolders:
 
 ## [Data_manip](./Data_manip/)
 Contains all the data manipulation tools. The detailed file explanation is as follows:
+
 | **File name** | **Purpose** |
 | ---- | ---- |
 | [Data_capturing_tool.py](./Data_manip/Data_capturing_tool.py) | This tool is used to capture data and generate data files |
@@ -85,11 +87,14 @@ The principle is:
   - We use LEDs to get all these points
 - Simultaneously, a flex sensor is also connected to the circuit and the response of this is read by the ADC of microcontroller which is in direct communication with the python script
 - So now that the python script has all control, it can prepare a dataset.
+- For now, the dataset is basically image and value pairs in `.npy` files.
 
 # References
 ## Library references
 1. **Numpy**: [Manual](https://docs.scipy.org/doc/numpy/index.html)
 2. **OpenCV**: [Docs](https://docs.opencv.org/)
+3. **PySerial**: [readthedocs](https://pyserial.readthedocs.io/en/latest/pyserial_api.html#exceptions)
+4. **ReGex**: [W3Schools](https://www.w3schools.com/python/python_regex.asp#split)
 
 [![TheProjectsGuy developer shield][TheProjectsGuy-dev-shield]][TheProjectsGuy-dev-profile]
 

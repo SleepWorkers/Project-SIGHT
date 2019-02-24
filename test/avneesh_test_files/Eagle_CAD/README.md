@@ -16,6 +16,7 @@ This folder contains files for the testing of the computer vision circuitry and 
 | [*LED_connections.sch*](./Flex_CV_interface/LED_connections.sch) | The LED connections to be made. Check Figure 1 (below) |
 
 ![Figure 1: LED Connections to be made](../.media/photos/LED_connections.png)
+
 **Figure 1**: The LED connections to be made.
 
 [![TheProjectsGuy developer shield][TheProjectsGuy-dev-shield]][TheProjectsGuy-dev-profile]

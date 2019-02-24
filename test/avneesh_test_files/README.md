@@ -8,6 +8,7 @@ This is the testing scratchpad of @TheProjectsGuy (Avneesh Mishra). All codes wr
 
 # Folders
 Here's information about the folders present in this directory
+
 | **Folder Name** | **Purpose** |
 | ---- | ---- |
 | [**cv_algo**](./cv_algo/) | All Computer vision related codes |
