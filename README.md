@@ -1,3 +1,8 @@
+[![Development status tag](https://img.shields.io/badge/Development%20Status-Milestone%201-red.svg)](./.media/docs/Milestone_Phase1.md)
+![Open issues badge](https://img.shields.io/github/issues-raw/SleepWorkers/Project-SIGHT.svg?style=social)
+
+
+
 # Table of contents
 - [Table of contents](#table-of-contents)
 - [Introduction](#introduction)
