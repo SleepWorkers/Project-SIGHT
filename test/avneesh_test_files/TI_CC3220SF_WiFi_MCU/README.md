@@ -11,6 +11,7 @@ This is the testing directory of TI LaunchPad CC3220SF EVM Kit. All the codes wr
     - [Examples](#examples)
     - [Codes](#codes)
   - [Code Composer Studio](#code-composer-studio)
+  - [Examples](#examples-1)
   - [TI Cloud Tools](#ti-cloud-tools)
 - [Resources](#resources)
   - [CC3220SF LaunchPad](#cc3220sf-launchpad)
@@ -61,17 +62,26 @@ The actual codes used for this project are listed here. They're stored in a sepa
 
 ## Code Composer Studio
 We've also used Code Composer Studio to program the board. In order to do the same, please follow the following steps:
-1. Download and install the latest version of Code Composer Studio (links in the [resources section of this page](#code-composer-studio-1))
+
+1. Download and install the latest version of Code Composer Studio (links in the [resources section of this page](#code-composer-studio-1)). 
 2. _Launch_ the Code Composer Studio application. It is suggested that you maintain a different workspace for this application.
 3. Open the _Resource Explorer_. This can be found under **View** -> **Resource Explorer**.
 4. Search for `CC3220SF LaunchPad`.
 5. Download and install the following _Software_:
-    - SimpleLink CC32xx SDK -v*
+    - SimpleLink CC32xx SDK
     - SimpleLink SDK Plugins
     - Energia
 6. Restart Code Composer Studio after all the software has been set up.
+7. You're suggested to make a separate workspace for the tutorials (mainly examples) described in this page. Name it `CC3220SF_Basics`.
 
+> **Tip**: Please ensure that you've installed the drivers for Windows as well as Linux platforms so that you can interface with your board.
 
+## Examples
+Examples for Code Composer Studio are a little more sophisticated, so we've created a little more descriptive documentation for those. Here are the examples we've created for `TI Wireless SimpleLink WiFi C3220SF MCU`:
+
+| **Example Name** | **Topics** | **Description** |
+| ---- | ---- | ------ |
+| [*CircularBlink*](./CCSv8_examples/CircularBlink/) | GPIO; Interrupts | Cycle through the debugger LEDs of the board using the switches | 
 
 ## TI Cloud Tools
 The TI Cloud tools are available at [this](https://dev.ti.com/) website. Once you reach there, you may be asked to install the TI Cloud Agent. It is important so that the website can interface with the board connected.
@@ -85,7 +95,9 @@ The TI Cloud tools are available at [this](https://dev.ti.com/) website. Once yo
   - [Data sheet][cc3220sf-datasheet]
   - [Out-of-Box Application][cc3220sf-out_of_box_doc]
   - [CC3220SF LaunchXL **Energia** Pinout](http://energia.nu/pinmaps/cc3220sf-launchxl/)
+- **Wiki**: [wiki.ti/CC3120 & CC3220][cc3220sf-ti_wiki]
 
+[cc3220sf-ti_wiki]: http://processors.wiki.ti.com/index.php/CC3120_%26_CC3220
 [cc3220sf-out_of_box_doc]: http://www.ti.com/lit/ug/swru473a/swru473a.pdf
 [cc3220sf-datasheet]: http://www.ti.com/lit/pdf/swas035
 [cc3220sf-website]: http://www.ti.com/tool/CC3220SF-LAUNCHXL
@@ -112,8 +124,16 @@ The TI Cloud tools are available at [this](https://dev.ti.com/) website. Once yo
 ## Code Composer Studio
 - **Official Website**: [TI/CCSTUDIO](http://www.ti.com/tool/CCSTUDIO)
 - **Download**: [TI/CCSTUDIO/Download](http://processors.wiki.ti.com/index.php/Download_CCS)
+- **Installation Instructions**
+  - [Windows][ccs-install-windows]
+  - [MacOS][ccs-install-macos]
+  - [Linux][ccs-install-linux]
+- [**User's Guide**][ccs-users-guide-unofficial]
 
-
+[ccs-install-linux]: http://software-dl.ti.com/ccs/esd/documents/ccsv8_linux_host_support.html
+[ccs-install-windows]: http://processors.wiki.ti.com/index.php/System_Requirements#Code_Composer_Studio_v8
+[ccs-install-macos]: http://processors.wiki.ti.com/index.php/MacOS_Host_Support_CCSv8
+[ccs-users-guide-unofficial]: https://www.eit.lth.se/fileadmin/eit/courses/eti121/References/ccs.pdf
 
 ## TI Cloud Tools
 - **Official Website**: [dev.ti.com](https://dev.ti.com/)

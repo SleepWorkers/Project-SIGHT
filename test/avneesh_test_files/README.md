@@ -11,7 +11,7 @@ Here's information about the folders present in this directory
 
 | **Folder Name** | **Purpose** |
 | ---- | ---- |
-| [**cv_algo**](./cv_algo/) | All Computer vision related codes |
+| [*cv_algo*](./cv_algo/) | All Computer vision related codes |
 | [*TI_CC3220SF_WiFi_MCU*](./TI_CC3220SF_WiFi_MCU/) | All the codes related only to CC3220SF Launch XL |
 | [*Eagle_CAD*](./Eagle_CAD/) | Eagle CAD files |
 | [*Arduino_codes*](/Arduino_codes/) | Arduino test codes (just if you need an alternative) |
