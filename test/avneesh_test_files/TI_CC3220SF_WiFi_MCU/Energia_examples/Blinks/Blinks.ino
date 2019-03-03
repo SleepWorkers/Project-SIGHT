@@ -11,9 +11,12 @@
  */
 
 // Define Red, Yellow and Green as LED variables
-#define LED1 RED_LED
-#define LED2 YELLOW_LED
-#define LED3 GREEN_LED
+#define P64 29
+#define P01 9
+#define P02 10
+#define LED1 P64
+#define LED2 P01
+#define LED3 P02
 
 void setup() {
   // Set all the LEDs as OUTPUT type

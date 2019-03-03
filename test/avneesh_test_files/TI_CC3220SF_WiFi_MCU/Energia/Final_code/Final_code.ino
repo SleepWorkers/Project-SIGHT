@@ -7,27 +7,20 @@
 #define NUM_LEDs 5
 #define PWM_val(i) int(255 - i*63.75)
 // Pin numbers of each one of them
-int PINs[NUM_LEDs] = {4, 5, 6, 7, 8};
+int PINs[NUM_LEDs] = {2, 1, 17, 64};
 // PWMs to write
 int PWMs[NUM_LEDs];
-
-void writeValuesOn(int pins[], int pwms[]) {
-  for (int i = 0; i < NUM_LEDs; i++) {
-    analogWrite(pins[i], pwms[i]);
-  }
-}
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
   for (int i = 0; i < NUM_LEDs; i++) {
-    // Set pin as OUTPUT
+    // Set pin as OUTPUTx
     pinMode(PINs[i], OUTPUT);
     // Decide their PWN values
     PWMs[i] = PWM_val(i);
     analogWrite(PINs[i], PWMs[i]);
   }
-  writeValuesOn(PINs, PWMs);
 }
 
 void loop() {
