@@ -6,11 +6,14 @@ This is the folder that stores all the examples for Code Composer Studio softwar
 - [Table of contents](#table-of-contents)
 - [How to use the examples](#how-to-use-the-examples)
 - [List of projects](#list-of-projects)
-  - [Circular Blink](#circular-blink)
+  - [CircularBlink](#circularblink)
     - [Code](#code)
+  - [CircularFade](#circularfade)
+    - [Code](#code-1)
 - [References](#references)
   - [CC3220SF TI Driver Documents](#cc3220sf-ti-driver-documents)
     - [GPIOs](#gpios)
+    - [PWM](#pwm)
 
 # How to use the examples
 Every folder is a project in it's own. You only have to move both the folders into a workspace directory and then build and upload the project. Each example is discussed in detail. 
@@ -24,7 +27,7 @@ For example, if you want to use the `CircularBlink` example and your workspace f
 
 
 # List of projects
-## Circular Blink
+## CircularBlink
 This example basically blinks a debugger LED (D10, D9 or D8) and you can change which LED is blinking by pressing the switch SW2 to go left or switch SW3 to go right. 
 So if say the red LED (D10) is blinking, by pressing SW2 (left switch), the left LED (D9, yellow LED) starts blinking. Press SW2 again and now the green one (D8) is blinking, press it again and the sequence rolls over and now the red one (D10) is blinking. By pressing the switch on the right (SW3), the exact opposite thing happens, the sequence shifts right instead of left.
 
@@ -39,7 +42,7 @@ The files that have been modified are as follows:
     #define Board_GPIO_LED1 CC3220SF_LAUNCHXL_GPIO_LED_D9
     #define Board_GPIO_LED2 CC3220SF_LAUNCHXL_GPIO_LED_D8
     ```
-    Check the **Usage** section of [GPIO.h File reference][cc3220sf-ti_driver_gpio_main].
+    Check the **Usage** section of [GPIO.h file reference][cc3220sf-ti_driver_gpio_main].
 - **CC3220SF_LAUNCHXL.c**: Added code for the LED configurations. The following has been altered in the _GPIO section_ to set the default configuration as output and low by default:
     ```cpp
     /* CC3220SF_LAUNCHXL_GPIO_LED_D9 */
@@ -56,11 +59,98 @@ The files that have been modified are as follows:
 
 Then, we upload the code and observe the results.
 
+## CircularFade
+In functionality, this example is the same as CircularBlink, the only difference is that here, the LEDs fade and brighten up instead of blinking, so it looks more gradual.
 
+### Code
+The code is derived from the _empty_ template in the Examples provided in the SDK. Here's how we go about making it:
+The specific example for this version is found in `Resource Explorer -> SimpleLink CC32xx SDK - v:2.40.02.00 -> Examples -> Development Tools -> CC3220SF LaunchPad -> TI Drivers -> empty -> TI-RTOS -> CCS Compiler -> empty`. We've made modifications to this particular file. This is exactly the `CircularFade_empty_CC3220SF_LAUNCHXL_tirtos_ccs` file.
+
+The files that have been modified are as follows:
+- **empty.c**: The main code file, where we've attached interrupts to the buttons and set the LED pin modes. Main code is in the following lines:
+    ```cpp
+    // Driver initialization
+    PWM_init();
+    // Parameter initialization
+    int i;
+    for (i = 0; i < CC3220SF_LAUNCHXL_PWMCOUNT ; i++) {
+        PWM_Params_init(&pwmParams[i]);
+        pwmParams[i].idleLevel = PWM_IDLE_LOW;   // Ideally LOW level
+        pwmParams[i].periodUnits = PWM_PERIOD_HZ;  // Period in Hz
+        pwmParams[i].periodValue = 1e6;            // 1 MHz
+        pwmParams[i].dutyUnits = PWM_DUTY_FRACTION;  // Duty is in fractional percentage
+        pwmParams[i].dutyValue = 0;                  // 0% initial PWM
+        // Create handler instance
+        pwm[i] = PWM_open(pwmNames[i], &pwmParams[i]);
+        // Start the PWM
+        PWM_start(pwm[i]);
+    }
+    ```
+    and
+    ```cpp
+    dutyValue = (uint32_t) (((uint64_t) PWM_DUTY_FRACTION_MAX * count) / 100);  // Duty cycle
+    PWM_setDuty(pwm[current_index], dutyValue);                                 // PWM value
+    ```
+- **Board.h**: Altered the following `#define` tags for the LEDs:
+    ```cpp
+    // #define Board_GPIO_LED0  CC3220SF_LAUNCHXL_GPIO_LED_D10 // Not used the debugger LED D10
+    // PWM pins
+    #define Board_PWM0  CC3220SF_LAUNCHXL_PWM1
+    #define Board_PWM1  CC3220SF_LAUNCHXL_PWM2
+    #define Board_PWM2  CC3220SF_LAUNCHXL_PWM3
+    ```
+    Here, the pin names have been initialized. Check the [PWM reference][cc3220sf-ti_driver_pwm_main] for more.
+- **CC3220SF_LAUNCHXL.h**: Altered the `enum CC3220SF_LAUNCHXL_PWMName` to:
+    ```cpp
+    typedef enum CC3220SF_LAUNCHXL_PWMName {
+        CC3220SF_LAUNCHXL_PWM1 = 0,
+        CC3220SF_LAUNCHXL_PWM2,
+        CC3220SF_LAUNCHXL_PWM3,
+
+        CC3220SF_LAUNCHXL_PWMCOUNT
+    } CC3220SF_LAUNCHXL_PWMName;
+    ```
+    These are just names given to PWM pins. These are again wrapped in `Board.h` header file for portability.
+- **CC3220SF_LAUNCHXL.c**: Altered the PWM configurations section to match the debugger LED pins. You can check the main source for pin names in the `PWMTimerCC32XX.h` file. The following code is placed in the PWM section after the `#include` directives:
+    ```cpp
+    const PWMTimerCC32XX_HWAttrsV2 pwmTimerCC3220SHWAttrs[CC3220SF_LAUNCHXL_PWMCOUNT] = {
+        {    /* CC3220SF_LAUNCHXL_PWM1 */
+            .pwmPin = PWMTimerCC32XX_PIN_64     // Red LED
+        },
+        {    /* CC3220SF_LAUNCHXL_PWM2 */
+            .pwmPin = PWMTimerCC32XX_PIN_01     // Yellow LED
+        },
+        {
+            /* CC3220SF_LAUNCHXL_PWM3 */
+            .pwmPin = PWMTimerCC32XX_PIN_02     // Green LED
+        }
+    };
+
+    const PWM_Config PWM_config[CC3220SF_LAUNCHXL_PWMCOUNT] = {
+        {
+            .fxnTablePtr = &PWMTimerCC32XX_fxnTable,
+            .object = &pwmTimerCC3220SObjects[CC3220SF_LAUNCHXL_PWM1],
+            .hwAttrs = &pwmTimerCC3220SHWAttrs[CC3220SF_LAUNCHXL_PWM1]
+        },
+        {
+            .fxnTablePtr = &PWMTimerCC32XX_fxnTable,
+            .object = &pwmTimerCC3220SObjects[CC3220SF_LAUNCHXL_PWM2],
+            .hwAttrs = &pwmTimerCC3220SHWAttrs[CC3220SF_LAUNCHXL_PWM2]
+        },
+        {
+            .fxnTablePtr = &PWMTimerCC32XX_fxnTable,
+            .object = &pwmTimerCC3220SObjects[CC3220SF_LAUNCHXL_PWM3],
+            .hwAttrs = &pwmTimerCC3220SHWAttrs[CC3220SF_LAUNCHXL_PWM3]
+        }
+    };
+
+    const uint_least8_t PWM_count = CC3220SF_LAUNCHXL_PWMCOUNT;
+    ```
 
 # References
 
 ## CC3220SF TI Driver Documents 
+Documentation for SimpleLink SDK built on TI RTOS
 - [**Main page**][cc3220sf-ti_driver_reference_page]
 
 ### GPIOs
@@ -68,9 +158,18 @@ General Purpose Input Output documentation:
 - [**GPIO.h**][cc3220sf-ti_driver_gpio_main] reference
 - [**GPIOCC32XX.h**][cc3220sf-ti_driver_gpio_cc32xx] reference
 
+### PWM
+Pulse Width Modulation documentation:
+- [**PWM.h**][cc3220sf-ti_driver_pwm_main] reference
+- [**PWMTimerCC32XX.h**][cc3220sf-ti_driver_pwm_timer_cc32xx] reference
+
+
 [cc3220sf-ti_driver_reference_page]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/index.html
 [cc3220sf-ti_driver_gpio_main]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/_g_p_i_o_8h.html
 [cc3220sf-ti_driver_gpio_cc32xx]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/_g_p_i_o_c_c32_x_x_8h.html
+[cc3220sf-ti_driver_pwm_main]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/_p_w_m_8h.html
+[cc3220sf-ti_driver_pwm_timer_cc32xx]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/_p_w_m_timer_c_c32_x_x_8h.html
+
 
 [![TheProjectsGuy developer shield][TheProjectsGuy-dev-shield]][TheProjectsGuy-dev-profile]
 

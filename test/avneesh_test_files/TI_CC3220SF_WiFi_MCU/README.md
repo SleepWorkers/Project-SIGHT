@@ -82,6 +82,7 @@ Examples for Code Composer Studio are a little more sophisticated, so we've crea
 | **Example Name** | **Topics** | **Description** |
 | ---- | ---- | ------ |
 | [*CircularBlink*](./CCSv8_examples/CircularBlink/) | GPIO; Interrupts | Cycle through the debugger LEDs of the board using the switches | 
+| [*CircularFade*](./CCSv8_examples/CircularFade/) | GPIO; PWM; Interrupts | Same as CircularBlink, but the LEDs fade here instead of blinking |
 
 ## TI Cloud Tools
 The TI Cloud tools are available at [this](https://dev.ti.com/) website. Once you reach there, you may be asked to install the TI Cloud Agent. It is important so that the website can interface with the board connected.
@@ -96,7 +97,10 @@ The TI Cloud tools are available at [this](https://dev.ti.com/) website. Once yo
   - [Out-of-Box Application][cc3220sf-out_of_box_doc]
   - [CC3220SF LaunchXL **Energia** Pinout](http://energia.nu/pinmaps/cc3220sf-launchxl/)
 - **Wiki**: [wiki.ti/CC3120 & CC3220][cc3220sf-ti_wiki]
+- **TI RTOS**
+  - [SimpleLink MCU SDK Driver][ccs3220sf-tirtos-api-docs]
 
+[ccs3220sf-tirtos-api-docs]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/index.html
 [cc3220sf-ti_wiki]: http://processors.wiki.ti.com/index.php/CC3120_%26_CC3220
 [cc3220sf-out_of_box_doc]: http://www.ti.com/lit/ug/swru473a/swru473a.pdf
 [cc3220sf-datasheet]: http://www.ti.com/lit/pdf/swas035
