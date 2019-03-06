@@ -11,7 +11,7 @@ This is the testing directory of TI LaunchPad CC3220SF EVM Kit. All the codes wr
     - [Examples](#examples)
     - [Codes](#codes)
   - [Code Composer Studio](#code-composer-studio)
-  - [Examples](#examples-1)
+    - [Examples](#examples-1)
   - [TI Cloud Tools](#ti-cloud-tools)
 - [Resources](#resources)
   - [CC3220SF LaunchPad](#cc3220sf-launchpad)
@@ -76,13 +76,14 @@ We've also used Code Composer Studio to program the board. In order to do the sa
 
 > **Tip**: Please ensure that you've installed the drivers for Windows as well as Linux platforms so that you can interface with your board.
 
-## Examples
+### Examples
 Examples for Code Composer Studio are a little more sophisticated, so we've created a little more descriptive documentation for those. Here are the examples we've created for `TI Wireless SimpleLink WiFi C3220SF MCU`:
 
 | **Example Name** | **Topics** | **Description** |
 | ---- | ---- | ------ |
-| [*CircularBlink*](./CCSv8_examples/CircularBlink/) | GPIO; Interrupts | Cycle through the debugger LEDs of the board using the switches | 
-| [*CircularFade*](./CCSv8_examples/CircularFade/) | GPIO; PWM; Interrupts | Same as CircularBlink, but the LEDs fade here instead of blinking |
+| [*CircularBlink*](./CCSv8_examples#circularblink) | GPIO; Interrupts | Cycle through the debugger LEDs of the board using the switches | 
+| [*CircularFade*](./CCSv8_examples#circularfade) | GPIO; PWM; Interrupts | Same as CircularBlink, but the LEDs fade here instead of blinking |
+| [*SimpleMultimeter*](./CCSv8_examples#simplemultimeter) | PWM; UART (Serial); ADCs | A simple miltimeter made using an ADC and displaying it on serial monitor and LEDs |
 
 ## TI Cloud Tools
 The TI Cloud tools are available at [this](https://dev.ti.com/) website. Once you reach there, you may be asked to install the TI Cloud Agent. It is important so that the website can interface with the board connected.

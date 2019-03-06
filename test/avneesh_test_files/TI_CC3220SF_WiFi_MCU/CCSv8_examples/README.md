@@ -10,10 +10,16 @@ This is the folder that stores all the examples for Code Composer Studio softwar
     - [Code](#code)
   - [CircularFade](#circularfade)
     - [Code](#code-1)
+  - [SimpleMultimeter](#simplemultimeter)
+    - [Code](#code-2)
+    - [Usage](#usage)
 - [References](#references)
+  - [Information](#information)
   - [CC3220SF TI Driver Documents](#cc3220sf-ti-driver-documents)
     - [GPIOs](#gpios)
     - [PWM](#pwm)
+    - [UART](#uart)
+    - [ADC](#adc)
 
 # How to use the examples
 Every folder is a project in it's own. You only have to move both the folders into a workspace directory and then build and upload the project. Each example is discussed in detail. 
@@ -27,7 +33,7 @@ For example, if you want to use the `CircularBlink` example and your workspace f
 
 
 # List of projects
-## CircularBlink
+## [CircularBlink](./CircularBlink/)
 This example basically blinks a debugger LED (D10, D9 or D8) and you can change which LED is blinking by pressing the switch SW2 to go left or switch SW3 to go right. 
 So if say the red LED (D10) is blinking, by pressing SW2 (left switch), the left LED (D9, yellow LED) starts blinking. Press SW2 again and now the green one (D8) is blinking, press it again and the sequence rolls over and now the red one (D10) is blinking. By pressing the switch on the right (SW3), the exact opposite thing happens, the sequence shifts right instead of left.
 
@@ -59,8 +65,8 @@ The files that have been modified are as follows:
 
 Then, we upload the code and observe the results.
 
-## CircularFade
-In functionality, this example is the same as CircularBlink, the only difference is that here, the LEDs fade and brighten up instead of blinking, so it looks more gradual.
+## [CircularFade](./CircularFade/)
+In functionality, this example is the same as CircularBlink, the only difference is that here, the LEDs fade and brighten up instead of blinking, so it looks more gradual. Along with this, this example also demonstrates how to use only one function for two different interrupts and differentiating the interrupt caused by the index number (check the _empty.c_ file).
 
 ### Code
 The code is derived from the _empty_ template in the Examples provided in the SDK. Here's how we go about making it:
@@ -147,7 +153,95 @@ The files that have been modified are as follows:
     const uint_least8_t PWM_count = CC3220SF_LAUNCHXL_PWMCOUNT;
     ```
 
+## [SimpleMultimeter](./SimpleMultimeter/)
+This is a simple multimeter made using the ADC on board. The ADC pins are as follows:
+
+| **Pin Number** | **Channel Number** | **Name** |
+| ----- | ------ | ----- |
+| Pin 58 | Channel 1 | Board_ADC0 |
+| Pin 59 | Channel 2 | Board_ADC1 |
+| Pin 60 | Channel 3 | Board_ADC2 |
+| Pin 57<sup>\*</sup> | Channel 0 | |
+
+<sup>\*</sup> Pin 57 is also used for RX line of UART0 serial, thus it's not used here.
+
+### Code 
+We've made the following modifications to the files of the `empty` project template:
+- **empty.c**: Contains the main code, check the [file](./SimpleMultimeter/SimpleMultimeter_empty_CC3220SF_LAUNCHXL_tirtos_ccs/empty.c) for full details.
+- **CC3220SF_LAUNCHXL.c**: The ADC section of this file was modified for the ADC configurations. 
+    ```cpp
+    const ADCCC32XX_HWAttrsV1 adcCC3220SHWAttrs[CC3220SF_LAUNCHXL_ADCCOUNT] = {
+        {
+            .adcPin = ADCCC32XX_PIN_58_CH_1
+        },
+        {
+            .adcPin = ADCCC32XX_PIN_59_CH_2
+        },
+        {
+            .adcPin = ADCCC32XX_PIN_60_CH_3
+        }
+    };
+
+    const ADC_Config ADC_config[CC3220SF_LAUNCHXL_ADCCOUNT] = {
+        {
+            .fxnTablePtr = &ADCCC32XX_fxnTable,
+            .object = &adcCC3220SObjects[CC3220SF_LAUNCHXL_ADC0],
+            .hwAttrs = &adcCC3220SHWAttrs[CC3220SF_LAUNCHXL_ADC0]
+        },
+        {
+            .fxnTablePtr = &ADCCC32XX_fxnTable,
+            .object = &adcCC3220SObjects[CC3220SF_LAUNCHXL_ADC1],
+            .hwAttrs = &adcCC3220SHWAttrs[CC3220SF_LAUNCHXL_ADC1]
+        },
+        {
+            .fxnTablePtr = &ADCCC32XX_fxnTable,
+            .object = &adcCC3220SObjects[CC3220SF_LAUNCHXL_ADC2],
+            .hwAttrs = &adcCC3220SHWAttrs[CC3220SF_LAUNCHXL_ADC2]
+        }
+    };
+    ```
+    Check the [ADC reference](#adc) for more
+- **CC3220SF_LAUNCHXL.h**: The names of pins are declared in an `enum` for _ADCNames_ are as shown below:
+    ```cpp
+    typedef enum CC3220SF_LAUNCHXL_ADCName {
+        CC3220SF_LAUNCHXL_ADC0 = 0,
+        CC3220SF_LAUNCHXL_ADC1,
+        CC3220SF_LAUNCHXL_ADC2,
+
+        CC3220SF_LAUNCHXL_ADCCOUNT
+    } CC3220SF_LAUNCHXL_ADCName;
+    ```
+- **Board.h**: The names above are translated for the board and are used in the final code. The following lines were changed:
+    ```cpp
+    // All ADCs used
+    #define Board_ADC0  CC3220SF_LAUNCHXL_ADC0
+    #define Board_ADC1  CC3220SF_LAUNCHXL_ADC1
+    #define Board_ADC2  CC3220SF_LAUNCHXL_ADC2
+    #define Board_ADC_COUNT CC3220SF_LAUNCHXL_ADCCOUNT
+    ```
+
+### Usage
+1. Select the right ADC in the file **empty.c** in the line:
+    ```cpp
+    adc = ADC_open(Board_ADC0, &adc_params);
+    ```
+2. Open a serial monitor
+    - You can either use the CCS built in terminal. `Shift` + `Ctrl` + `Alt` + `T` and select the serial port with 115200 baud rate.
+    - You can use an external app like [gtkterm](https://linux.die.net/man/1/gtkterm).
+3. Supply voltage to pin and see the LEDs change brightness as well as values on the serial monitor.
+
+> **Note**: The maximum input voltage to the ADCs is 1.5V
+
 # References
+
+## Information
+- [**UART**][info_uart] communication reference.
+- [**SPI**][info_spi] communication reference.
+- [**I2C**][info_i2c] communication protocol.
+
+[info_uart]: http://www.circuitbasics.com/basics-uart-communication/
+[info_spi]: http://www.circuitbasics.com/basics-of-the-spi-communication-protocol/
+[info_i2c]: http://www.circuitbasics.com/basics-of-the-i2c-communication-protocol/
 
 ## CC3220SF TI Driver Documents 
 Documentation for SimpleLink SDK built on TI RTOS
@@ -163,13 +257,27 @@ Pulse Width Modulation documentation:
 - [**PWM.h**][cc3220sf-ti_driver_pwm_main] reference
 - [**PWMTimerCC32XX.h**][cc3220sf-ti_driver_pwm_timer_cc32xx] reference
 
+### UART
+Universal Asynchronous Receiver/Transmitter documentation:
+- [**UART.h**][cc3220sf-ti_driver_uart_main] reference
+- [**UARTCC32XX.h**][cc3220sf-ti_driver_uart_cc32xx] reference
+- [**UARTCC32XXDMA.h**][cc3220sf-ti_driver_uart_cc32xxdma] reference
+
+### ADC
+Analog to Digital Converter documentation:
+- [**ADC.h**][cc3220sf-ti_driver_adc_main] reference
+- [**ADCCC32XX.h**][cc3220sf-ti_driver_adc_cc32xx] reference
 
 [cc3220sf-ti_driver_reference_page]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/index.html
 [cc3220sf-ti_driver_gpio_main]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/_g_p_i_o_8h.html
 [cc3220sf-ti_driver_gpio_cc32xx]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/_g_p_i_o_c_c32_x_x_8h.html
 [cc3220sf-ti_driver_pwm_main]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/_p_w_m_8h.html
 [cc3220sf-ti_driver_pwm_timer_cc32xx]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/_p_w_m_timer_c_c32_x_x_8h.html
-
+[cc3220sf-ti_driver_uart_main]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/_u_a_r_t_8h.html
+[cc3220sf-ti_driver_uart_cc32xx]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/_u_a_r_t_c_c32_x_x_8h.html
+[cc3220sf-ti_driver_uart_cc32xxdma]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/_u_a_r_t_c_c32_x_x_d_m_a_8h.html
+[cc3220sf-ti_driver_adc_main]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/_a_d_c_8h.html
+[cc3220sf-ti_driver_adc_cc32xx]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/_a_d_c_c_c32_x_x_8h.html
 
 [![TheProjectsGuy developer shield][TheProjectsGuy-dev-shield]][TheProjectsGuy-dev-profile]
 
