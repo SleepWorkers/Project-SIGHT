@@ -1,6 +1,8 @@
 """
 Author: Avneesh Mishra
 Purpose: Retrieve the data captured
+
+Version: 1.0
 """
 
 import numpy as np

@@ -75,7 +75,7 @@ To capture your own data, do the following:
 1. Burn the program file on the microcontroller:
     - The description of this is available in the folders for microcontrollers.
       - [Arduino](../Arduino_codes/) or [TI_CC3220SF](TI_CC3220SF_WiFi_MCU)
-2. Run the script [Data_capturing_tool.py](./Data_manip/Data_capturing_tool.py).
+2. Run the script [Data_capturing_tool.py](Data_manip/Data_capturing_tool_v1.py).
 3. Follow the instructions 
     - `'c'` or `'s'` to save
     - `'d'` or `'o'` when done
