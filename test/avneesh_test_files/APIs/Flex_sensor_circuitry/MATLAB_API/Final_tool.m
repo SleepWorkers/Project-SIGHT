@@ -14,7 +14,7 @@ fprintf("======= Initializing the system ======= \n");
 try
     fprintf("Trying to read the files :\n");
     fprintf("- resistor_vals.mat: For resistance values in variable 'resistor_values'\n");
-    fprintf("- sensor_readings.mat: For 'flex_sizes', 'finger_names', 'supply_voltage', 'full_in_flex' and 'full_out_flex'\n");
+    fprintf("- sensor_readings.mat: For 'flex_sizes', 'finger_names', 'supply_voltage', 'adc_max_input', 'full_in_flex' and 'full_out_flex'\n");
     load sensor_readings.mat
     flex_sizes;
     finger_names;
@@ -45,19 +45,20 @@ catch
         26
         ];
     supply_voltage = 5;
-    adc_max_input = 5;
+    adc_max_input = 4.95;
     resistor_values = [1 1.5 2.2 3.3 4.7 5.6 6.8 8.2 10 15 22 33 47 56 68 100 150 220 330 470]';
     save sensor_readings.mat finger_names flex_sizes full_in_flex full_out_flex supply_voltage adc_max_input;
     save resistor_vals.mat resistor_values;
     fprintf("Data initialized and saved\n");
 end
 % Show everything as tables
-col_names = {'finger_name' 'flex_in_kohm' 'flex_out_kohm'};
-input_table = table(finger_names, full_in_flex, full_out_flex);
+col_names = {'finger_name', 'flex_sensor_size', 'flex_in_kohm', 'flex_out_kohm'};
+input_table = table(finger_names, flex_sizes, full_in_flex, full_out_flex);
 input_table.Properties.VariableNames = col_names;
 % List of resistance values in k ohm
 resistor_table = table(resistor_values, 'VariableNames', {'Resistance_kohm'});
 fprintf("The voltage supply is %f V to 0 V\n", supply_voltage);
+fprintf("The ADC input voltage range is %f V to 0 V\n", adc_max_input);
 fprintf("The resistance values available are the following (everything in kΩ)\n");
 disp(resistor_table);
 fprintf("Data values (all resistances in kΩ)\n");
@@ -115,7 +116,7 @@ end
 input_table.above_pos = above_position;
 input_table1 = input_table;
 input_table1.r1_vals = r1_vals;
-input_table1.Properties.VariableNames{5} = 'r1_kohm';
+input_table1.Properties.VariableNames{6} = 'r1_kohm';
 input_table1.min_v_raw = v_min;
 input_table1.max_v_raw = v_max;
 input_table1.dev_v_raw = v_dev;
