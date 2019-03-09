@@ -161,6 +161,13 @@ This section summarizes everything.
 After everything is done, it must look like this
 ![Final circuitry](./../.media/photos/Full_circuit_1.png)
 
+The final circuit is as follows
+![Final eagle CAD](./../.media/photos/Flex_sensor_final_eagle_1.png)
+All files can be found in the [Eagle_CAD folder][eagle-cad-folder], more on the documentation [here][eagle-cad-folder-doc]
+
+[eagle-cad-folder]: ./../../Eagle_CAD/Flex_connections
+[eagle-cad-folder-doc]: ./../../Eagle_CAD/README.md#flexconnections
+
 
 [![TheProjectsGuy developer shield][TheProjectsGuy-dev-shield]][TheProjectsGuy-dev-profile]
 
