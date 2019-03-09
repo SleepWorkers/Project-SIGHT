@@ -39,6 +39,8 @@ All the script files for testing are written here
 - [Flex_full_debug_v1.m](./Script_files/Flex_full_debug_v1.m): The second version of the circuit generator. Give it resistance ranges and it'll given you everything about the circuit.
 - [Final_flex_calculator.m](./Script_files/Final_flex_calculator.m): The final file for flex sensor testing.
 
+The data that we used for testing is stored as `.mat` files in the [Backups](/Script_files/Backups/) folder.
+
 ## [Simulink Files](./Simulink/)
 All [Simulink](https://www.mathworks.com/products/simulink.html) files are present below:
 
