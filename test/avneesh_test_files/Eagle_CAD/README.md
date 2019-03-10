@@ -5,22 +5,22 @@ This folder contains CAD files for [issue 15](https://github.com/SleepWorkers/Pr
 - [What is this?](#what-is-this)
 - [Table of contents](#table-of-contents)
 - [Files and folders](#files-and-folders)
-  - [Flex\_CV\_interface](#flexcvinterface)
-  - [Flex\_connections](#flexconnections)
+  - [Flex CV interface v1](#flex-cv-interface-v1)
+  - [Flex connections](#flex-connections)
 
 # Files and folders
-## [Flex\_CV\_interface](./Flex_CV_interface)
+## [Flex CV interface v1](./Flex_CV_interface_v1)
 This folder contains files for the testing of the computer vision circuitry and the data collection algorithm part of [this issue](https://github.com/SleepWorkers/Project-SIGHT/issues/22). The files that are used for this are:
 
 | **File Name** | **Purpose** |
 | ---- | ---- |
-| [*LED_connections.sch*](./Flex_CV_interface/LED_connections.sch) | The LED connections to be made. Check Figure 1 (below) |
+| [*LED_connections.sch*](./Flex_CV_interface_v1/LED_connections.sch) | The LED connections to be made. Check Figure 1 (below) |
 
 ![Figure 1: LED Connections to be made](../.media/photos/LED_connections.png)
 
 **Figure 1**: The LED connections to be made.
 
-## [Flex\_connections](./Flex_connections/)
+## [Flex connections](./Flex_connections/)
 The flex sensor connections for the circuit. This is aligned with the API to generate the circuitry.
 
 | **File Name** | **Purpose** |
