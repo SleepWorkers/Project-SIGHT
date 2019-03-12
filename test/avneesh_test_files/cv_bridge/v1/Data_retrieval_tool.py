@@ -59,7 +59,8 @@ def retAngles(points):
 
 print("The following are the controls\n",
       "\t", "'q' or ESC to perform an emergency exit", "\n",
-      "\t", "'n' to go to the next image", "\n"
+      "\t", "'n' to go to the next image", "\n",
+      "\t", "'r' to reselect the image points", "\n",
       "Please select the points and then go to the next image", "\n"
       "Started program..."
       )
@@ -67,7 +68,8 @@ time.sleep(1)
 cv.namedWindow("Image")
 cv.moveWindow("Image", 10, 30)
 cv.setMouseCallback("Image", mouseCallback)
-for img in imgs:
+for i_index in range(len(imgs)):
+    img = imgs[i_index]
     try:
         # For every single image in the imgs array
         while True:
@@ -88,22 +90,27 @@ for img in imgs:
             cv.imshow("Image", img_disp)
             key = cv.waitKey(2) & 0xFF
             if key == ord('q') or key == 27:
+                # Execution error
                 raise MainImageExitLoop
             elif key == ord('n'):
+                # Next image
                 final_points.append(np.array(points))
                 final_angles.append(np.array(angles))
                 points = []
                 angles = []
                 break
+            elif key == ord('r'):
+                # Retake the points
+                points = []
+                angles = []
     except MainImageExitLoop:
         print("Emergency exit called")
         exit(0)
 
 cv.destroyAllWindows()
-print(final_points)
-print(final_angles)
+print("Points: ", final_points)
+print("Angles: ", final_angles)
 final_pts = np.array(final_points)
 final_ang = np.array(final_angles)
 np.save(POINT_FILE, final_pts)
 np.save(ANGLES_FILE, final_ang)
-
