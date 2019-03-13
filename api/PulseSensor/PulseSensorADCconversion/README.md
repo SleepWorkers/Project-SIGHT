@@ -3,14 +3,11 @@
 
 ---
 
-## Example Summary
-
-Example that uses the ADC driver to make a number of samples
-and print them via UART.
+## Code Summary
+This code enables you to convert the raw ADC values from a Pulse sensor to actual Voltage values measured in microvolts(uV).
 
 ## Peripherals Exercised
 
-* `Board_ADC0` - ADC channel 0
 * `Board_ADC1` - ADC channel 1
 
 ## Resources & Jumper Settings
@@ -21,20 +18,19 @@ Otherwise, you can find Board.html in the directory
 &lt;SDK_INSTALL_DIR&gt;/source/ti/boards/&lt;BOARD&gt;.
 
 
-## Example Usage
+## Code Usage
 
 * Example output is generated through use of Display driver APIs. Refer to the
 Display driver documentation found in the SimpleLink MCU SDK User's Guide.
 
-* Connect the ADC channels to the sampling sources.
-    * For quick testing, connect `Board_ADC0` to `GND` and `Board_ADC1` to `3V3`.
+* Connect the Pulse sensors terminals to the supply voltage pin(5V or 3.3V in this case), Ground(0V) and to Analog Pin DIO24(A1). The code samples the input from the Analog port 1.
 
 >__Important:__ Caution should be used when connecting the pins to analog inputs greater than 3VDC.
 
 * Open a serial session (e.g. [`PuTTY`](http://www.putty.org/ "PuTTY's
 Homepage"), etc.) to the appropriate COM port.
     * The COM port can be determined via Device Manager in Windows or via
-`ls /dev/tty*` in Linux.
+`ls /dev/tty*` in Linux. Do not forget to put the baud rate 112500. 
 
 The connection will have the following settings:
 ```
@@ -49,34 +45,57 @@ The connection will have the following settings:
 
 Example snippet of outputs:
 ```
-        ADC channel 1 raw result (4): 230
+Starting the Pulse sensor example
 
-        ADC channel 1 convert result (4): 2500000 uV
-                    .                 .     .
-                    .                 .     .
-                    .                 .     .
-        ADC channel 1 raw result (9): 280
+Pulse sensor raw result (0): 2956
 
-        ADC channel 1 convert result (9): 3000000 uV
+Pulse sensor converted result (0): 3138640 uV
+
+Pulse sensor raw result (1): 2958
+
+Pulse sensor converted result (1): 3140736 uV
+
+Pulse sensor raw result (2): 2955
+
+Pulse sensor converted result (2): 3137584 uV
+
+Pulse sensor raw result (3): 2956
+
+Pulse sensor converted result (3): 3138640 uV
+
+Pulse sensor raw result (4): 2954
+
+Pulse sensor converted result (4): 3136528 uV
+
+Pulse sensor raw result (5): 2956
+
+Pulse sensor converted result (5): 3138640 uV
+
+Pulse sensor raw result (6): 2956
+
+Pulse sensor converted result (6): 3138640 uV
+
+Pulse sensor raw result (7): 2955
+
+Pulse sensor converted result (7): 3137584 uV
+
+Pulse sensor raw result (8): 2954
+
+Pulse sensor converted result (8): 3136528 uV
+
+Pulse sensor raw result (9): 2954
+
+Pulse sensor converted result (9): 3136528 uV
 ```
 
-* The example outputs one sample from `Board_ADC0` and ten samples from
-`Board_ADC1`.
+* The example outputs ten samples from `Board_ADC1`.
 
 * The actual conversion result values may vary depending on the reference
 voltage settings. Please refer to the board specific datasheet for more details.
 
 ## Application Design Details
 
-This application uses two threads:
-
-`threadFxn0` - performs the following actions:
-
-1. Opens an ADC driver object.
-
-2. Uses the ADC driver object to perform a single sample and outputs the result.
-
-3. Closes the ADC driver object.
+This application uses one threads:
 
 `threadFxn1` - performs the following actions:
 
