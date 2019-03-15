@@ -235,7 +235,7 @@ final_output_table.del_v1 = [];
 final_output_table.min_v2 = [];
 final_output_table.max_v2 = [];
 final_output_table.del_v2 = [];
-final_output_table.Properties.RowNames = flex_sizes;
+% final_output_table.Properties.RowNames = flex_sizes;
 disp(final_output_table);
 fprintf("Side arm resistances: \n");
 fprintf("\tUpper (R3) = %f kΩ \n\tLower (R4) = %f kΩ\n", rside_upper, rside_lower);

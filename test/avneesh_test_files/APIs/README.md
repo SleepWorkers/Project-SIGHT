@@ -1,8 +1,8 @@
-# WHat is this?
+# What is this?
 This is the test folder for APIs developed by [TheProjectsGuy][TheProjectsGuy-dev-profile]
 
 # Table of contents
-- [WHat is this?](#what-is-this)
+- [What is this?](#what-is-this)
 - [Table of contents](#table-of-contents)
 - [Flex sensors](#flex-sensors)
   - [Circuit API](#circuit-api)
