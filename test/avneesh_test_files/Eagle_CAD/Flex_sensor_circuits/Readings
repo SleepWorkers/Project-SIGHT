@@ -1,0 +1,85 @@
+4th index on knuckles for 4.5"
+4.5" flex sensors
+Name | Full out | Full in | Number on Flex sensor |
+RF | 5.0 kohm | 14.5 kohm | .11 |
+IF | 4.0 kohm | 9.6 kohm | ..1 |
+MF | 4.2 kohm | 9.8 kohm | .1. |
+
+2.2" flex sensors
+till end joint of little finger
+Name | Full out | Full in | Number on Flex sensor |
+LF | 92.5 kohm | 130.5 kohm | 1.. |
+
+==========================================================
+CC3220SF LaunchXL
+Supply voltage = 3.3 V
+ADC Maximum input voltage = 1.5 V (1.45 V)
+
+Breif here
+      finger_name      flex_sensor_size    flex_in_kohm    flex_out_kohm    above_pos    r1_kohm     min_v3     max_v3     del_v3
+    _______________    ________________    ____________    _____________    _________    _______    ________    _______    ______
+
+    "Ring Finger"      '4.5"'               14.5              5             "below"      8.2        0.073318     1.4424     1.369
+    "Index Finger"     '4.5"'                9.6              4             "below"      6.8        0.028992     1.1611    1.1322
+    "Middle Finger"    '4.5"'                9.8            4.2             "below"      6.8        0.089275     1.1875    1.0982
+    "Little Finger"    '2.2"'              130.5           92.5             "below"      120         0.37088    0.82198    0.4511
+
+Side arm resistances: 
+	Upper (R3) = 47.000000 kΩ 
+	Lower (R4) = 27.000000 kΩ
+	Effectiveness = 98.513514 %
+Instrumentation amplifier reistances: 
+	Forward resistance (Rf) = 0.750000 kΩ 
+	Backward resistance (Rb) = 0.470000 kΩ
+	Effectiveness = 99.472721 %
+Total effectiveness = 97.994073 %
+
+
+==========================================================
+MSP430FR2355
+Supply Voltage = 5 V
+ADC Maximum input voltage = 3.6 V
+
+Breif here
+      finger_name      flex_sensor_size    flex_in_kohm    flex_out_kohm    above_pos    r1_kohm     min_v3     max_v3    del_v3
+    _______________    ________________    ____________    _____________    _________    _______    ________    ______    ______
+
+    "Ring Finger"      '4.5"'               14.5              5             "below"      8.2         0.18177    3.5759    3.3942
+    "Index Finger"     '4.5"'                9.6              4             "below"      6.8        0.071877    2.8788    2.8069
+    "Middle Finger"    '4.5"'                9.8            4.2             "below"      6.8         0.22133     2.944    2.7226
+    "Little Finger"    '2.2"'              130.5           92.5             "below"      120         0.91949    2.0379    1.1184
+
+Side arm resistances: 
+	Upper (R3) = 0.470000 kΩ 
+	Lower (R4) = 0.270000 kΩ
+	Effectiveness = 98.513514 %
+Instrumentation amplifier reistances: 
+	Forward resistance (Rf) = 470.000000 kΩ 
+	Backward resistance (Rb) = 180.000000 kΩ
+	Effectiveness = 99.331619 %
+Total effectiveness = 97.855068 %
+
+
+==========================================================
+CC2640R2
+Supply Voltage = 5 V
+ADC Maximum = 3 V
+
+Breif here
+      finger_name      flex_sensor_size    flex_in_kohm    flex_out_kohm    above_pos    r1_kohm     min_v3     max_v3    del_v3 
+    _______________    ________________    ____________    _____________    _________    _______    ________    ______    _______
+
+    "Ring Finger"      '4.5"'               14.5              5             "below"      8.2         0.15083    2.9673     2.8164
+    "Index Finger"     '4.5"'                9.6              4             "below"      6.8        0.059643    2.3888     2.3291
+    "Middle Finger"    '4.5"'                9.8            4.2             "below"      6.8         0.18366    2.4429     2.2592
+    "Little Finger"    '2.2"'              130.5           92.5             "below"      120         0.76298     1.691    0.92803
+
+Side arm resistances: 
+	Upper (R3) = 0.470000 kΩ 
+	Lower (R4) = 0.270000 kΩ
+	Effectiveness = 98.513514 %
+Instrumentation amplifier reistances: 
+	Forward resistance (Rf) = 0.390000 kΩ 
+	Backward resistance (Rb) = 0.180000 kΩ
+	Effectiveness = 98.908931 %
+Total effectiveness = 97.438663 %
