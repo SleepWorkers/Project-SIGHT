@@ -13,6 +13,8 @@ This is the folder that stores all the examples for Code Composer Studio softwar
   - [SimpleMultimeter](#simplemultimeter)
     - [Code](#code-2)
     - [Usage](#usage)
+  - [I2CTest](#i2ctest)
+    - [Code](#code-3)
 - [References](#references)
   - [Information](#information)
   - [CC3220SF TI Driver Documents](#cc3220sf-ti-driver-documents)
@@ -20,6 +22,7 @@ This is the folder that stores all the examples for Code Composer Studio softwar
     - [PWM](#pwm)
     - [UART](#uart)
     - [ADC](#adc)
+    - [I2C](#i2c)
 
 # How to use the examples
 Every folder is a project in it's own. You only have to move both the folders into a workspace directory and then build and upload the project. Each example is discussed in detail. 
@@ -232,12 +235,44 @@ We've made the following modifications to the files of the `empty` project templ
 
 > **Note**: The maximum input voltage to the ADCs is 1.5V
 
+## [I2CTest](./I2CTest/)
+Testing the I2C on board.
+
+### Code
+
+The main code is in the `*mainThread` function in **empty.c** file. Initializing the I2C is done using:
+```cpp
+I2C_Handle i2c;
+I2C_Params i2c_params;
+I2C_Transaction i2c_transaction;
+I2C_init();
+```
+
+A transaction to send one byte and receive two bytes of data is initialized using the following code:
+```cpp
+I2C_Params_init(&i2c_params);
+i2c_params.bitRate = I2C_400kHz;
+i2c = I2C_open(Board_I2C_TMP, &i2c_params);
+i2c_transaction.slaveAddress = TMP006_ADDR;
+txBuffer[0] = TMP006_SENSOR_HEX_ADDR;
+i2c_transaction.writeBuf = txBuffer;
+i2c_transaction.writeCount = 1;
+i2c_transaction.readBuf = rxBuffer;
+i2c_transaction.readCount = 2;
+```
+
+A transaction is initiated using the following code:
+```cpp
+I2C_transfer(i2c, &i2c_transaction)
+```
+Check the references in i2c for more
+
 # References
 
 ## Information
 - [**UART**][info_uart] communication reference.
 - [**SPI**][info_spi] communication reference.
-- [**I2C**][info_i2c] communication protocol.
+- [**I2C**][info_i2c] communication protocol. [Wikipedia link](https://en.wikipedia.org/wiki/I%C2%B2C).
 
 [info_uart]: http://www.circuitbasics.com/basics-uart-communication/
 [info_spi]: http://www.circuitbasics.com/basics-of-the-spi-communication-protocol/
@@ -268,6 +303,11 @@ Analog to Digital Converter documentation:
 - [**ADC.h**][cc3220sf-ti_driver_adc_main] reference
 - [**ADCCC32XX.h**][cc3220sf-ti_driver_adc_cc32xx] reference
 
+### I2C
+I<sup>2</sup>C protocol:
+- [**I2C.h**][cc3220sf-ti_driver_i2c_main] reference
+- [**I2CCC32XX.h**][cc3220sf-ti_driver_i2c_cc32xx] reference
+
 [cc3220sf-ti_driver_reference_page]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/index.html
 [cc3220sf-ti_driver_gpio_main]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/_g_p_i_o_8h.html
 [cc3220sf-ti_driver_gpio_cc32xx]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/_g_p_i_o_c_c32_x_x_8h.html
@@ -278,6 +318,8 @@ Analog to Digital Converter documentation:
 [cc3220sf-ti_driver_uart_cc32xxdma]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/_u_a_r_t_c_c32_x_x_d_m_a_8h.html
 [cc3220sf-ti_driver_adc_main]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/_a_d_c_8h.html
 [cc3220sf-ti_driver_adc_cc32xx]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/_a_d_c_c_c32_x_x_8h.html
+[cc3220sf-ti_driver_i2c_main]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/_i2_c_8h.html
+[cc3220sf-ti_driver_i2c_cc32xx]: http://dev.ti.com/tirex/content/simplelink_cc32xx_sdk_2_40_02_00/docs/tidrivers/doxygen/html/_i2_c_c_c32_x_x_8h.html
 
 [![TheProjectsGuy developer shield][TheProjectsGuy-dev-shield]][TheProjectsGuy-dev-profile]
 
