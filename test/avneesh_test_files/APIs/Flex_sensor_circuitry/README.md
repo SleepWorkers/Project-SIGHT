@@ -160,9 +160,9 @@ This section summarizes everything.
 
 If you have a resistance value, then the net voltage value is given by:
 - If sensor position is **below**
-  ![Flex below voltage](./../.media/photos/eq_v_below.png)
+    ![Flex below voltage](./../.media/photos/eq_v_below.png)
 - If sensor position is **above**
-  ![Flex above voltage](./../.media/photos/eq_v_above.png)
+    ![Flex above voltage](./../.media/photos/eq_v_above.png)
 
 
 After everything is done, it must look like this
