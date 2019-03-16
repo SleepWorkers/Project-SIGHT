@@ -158,6 +158,13 @@ Here, we'll build the instrumental amplifier.
 ##### FINAL RESULTS
 This section summarizes everything.
 
+If you have a resistance value, then the net voltage value is given by:
+- If sensor position is **below**
+  ![Flex below voltage](./../.media/photos/eq_v_below.png)
+- If sensor position is **above**
+  ![Flex above voltage](./../.media/photos/eq_v_above.png)
+
+
 After everything is done, it must look like this
 ![Final circuitry](./../.media/photos/Full_circuit_1.png)
 
@@ -165,7 +172,7 @@ The final circuit is as follows
 ![Final eagle CAD](./../.media/photos/Flex_sensor_final_eagle_1.png)
 All files can be found in the [Eagle_CAD folder][eagle-cad-folder], more on the documentation [here][eagle-cad-folder-doc]
 
-[eagle-cad-folder]: ./../../Eagle_CAD/Flex_connections
+[eagle-cad-folder]: ./../../Eagle_CAD/
 [eagle-cad-folder-doc]: ./../../Eagle_CAD/README.md#flexconnections
 
 

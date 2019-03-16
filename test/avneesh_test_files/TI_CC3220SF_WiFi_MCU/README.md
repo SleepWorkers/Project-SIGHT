@@ -84,7 +84,7 @@ Examples for Code Composer Studio are a little more sophisticated, so we've crea
 | [*CircularBlink*](./CCSv8_examples#circularblink) | GPIO; Interrupts | Cycle through the debugger LEDs of the board using the switches | 
 | [*CircularFade*](./CCSv8_examples#circularfade) | GPIO; PWM; Interrupts | Same as CircularBlink, but the LEDs fade here instead of blinking |
 | [*SimpleMultimeter*](./CCSv8_examples#simplemultimeter) | PWM; UART (Serial); ADCs | A simple miltimeter made using an ADC and displaying it on serial monitor and LEDs |
-| [*I2CTest*](./CCSv8_examples#i2ctest) | I2C; Display | A program to read temperature from the TMP006 temperature sensor on board |
+| [*I2CTest*](./CCSv8_examples#i2ctest) | I2C; Display | A program to read temperature from the [TMP006](http://www.ti.com/ww/eu/sensampbook/tmp006.pdf) temperature sensor on board |
 
 ## TI Cloud Tools
 The TI Cloud tools are available at [this](https://dev.ti.com/) website. Once you reach there, you may be asked to install the TI Cloud Agent. It is important so that the website can interface with the board connected.

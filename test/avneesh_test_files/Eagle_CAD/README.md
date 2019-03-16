@@ -7,6 +7,7 @@ This folder contains CAD files for [issue 15](https://github.com/SleepWorkers/Pr
 - [Files and folders](#files-and-folders)
   - [Flex CV interface v1](#flex-cv-interface-v1)
   - [Flex connections](#flex-connections)
+  - [Flex sensor circuits](#flex-sensor-circuits)
 
 # Files and folders
 ## [Flex CV interface v1](./Flex_CV_interface_v1)
@@ -28,6 +29,9 @@ The flex sensor connections for the circuit. This is aligned with the API to gen
 | [Final_circuit.sch](./Flex_connections/Final_circuit.sch) | The final circuitry (template) |
 
 ![Final circuitry](./../APIs/.media/photos/Flex_sensor_final_eagle_1.png)
+
+## [Flex sensor circuits](./Flex_sensor_circuits/)
+The individual flex sensor circuits for the connections. This is the final file having all the connection details.
 
 [![TheProjectsGuy developer shield][TheProjectsGuy-dev-shield]][TheProjectsGuy-dev-profile]
 [![Spawning Issue #22][issue-shield]][issue-link]

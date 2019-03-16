@@ -233,7 +233,7 @@ We've made the following modifications to the files of the `empty` project templ
     - You can use an external app like [gtkterm](https://linux.die.net/man/1/gtkterm).
 3. Supply voltage to pin and see the LEDs change brightness as well as values on the serial monitor.
 
-> **Note**: The maximum input voltage to the ADCs is 1.5V
+> **Note**: The maximum input voltage to the ADCs is 1.5V but the board by default scales it to 3.45 V, so the board can take 3.45 V and then scale it down, but the ADC on microcontroller can only take upto 1.5V
 
 ## [I2CTest](./I2CTest/)
 Testing the I2C on board.
