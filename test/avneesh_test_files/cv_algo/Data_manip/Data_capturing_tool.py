@@ -11,13 +11,13 @@ Usage:
 
 # -------- List of parameters ---------
 # Webcam number (for video feed)
-CAM_NO = 0
+CAM_NO = 1
 ADC_NUM = 0
 PORT_ADDR = "/dev/ttyACM0"
 PORT_BAUD_RATE = 115200
 PORT_TIMEOUT = 2
-SAVE_IMAGE_FILE_NAME = "images.npy"
-SAVE_ADC_READINGS_FILE_NAME = "readings.npy"
+SAVE_IMAGE_FILE_NAME = "ring_images.npy"
+SAVE_ADC_READINGS_FILE_NAME = "ring_readings.npy"
 
 import cv2 as cv
 from Data_manip.Serial_communication_test.Serial_reader_v3 import SerialParser

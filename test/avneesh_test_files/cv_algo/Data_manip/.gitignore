@@ -1,2 +1,2 @@
-# Ignore all .npy files
+# Ignore all .npy files in this directory
 *.npy
