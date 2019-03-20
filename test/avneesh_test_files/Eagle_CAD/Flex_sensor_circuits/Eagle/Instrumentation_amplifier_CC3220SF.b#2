@@ -1703,10 +1703,10 @@ design rules under a new name.</description>
 <contactref element="IC1" pad="5"/>
 <wire x1="41.91" y1="38.1" x2="50.8" y2="38.1" width="0.1524" layer="16"/>
 <via x="50.8" y="38.1" extent="1-16" drill="0.35" shape="square"/>
-<wire x1="74.93" y1="22.86" x2="67.31" y2="22.86" width="0.1524" layer="16"/>
 <via x="67.31" y="22.86" extent="1-16" drill="0.35" shape="square"/>
 <wire x1="67.31" y1="22.86" x2="66.04" y2="22.86" width="0.1524" layer="1"/>
 <wire x1="66.04" y1="22.86" x2="50.8" y2="38.1" width="0.1524" layer="1"/>
+<wire x1="67.31" y1="22.86" x2="74.93" y2="22.86" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

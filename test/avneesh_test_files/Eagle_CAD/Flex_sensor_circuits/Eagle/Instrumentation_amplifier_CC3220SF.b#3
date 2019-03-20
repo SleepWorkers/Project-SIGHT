@@ -1584,14 +1584,6 @@ design rules under a new name.</description>
 <attribute name="NAME" x="32.9438" y="27.2288" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="33.02" y="22.225" size="1.27" layer="27"/>
 </element>
-<element name="A1_O" library="pinhead" library_urn="urn:adsk.eagle:library:325" package="1X01" package3d_urn="urn:adsk.eagle:package:22485/2" value="" x="46.99" y="38.1" smashed="yes">
-<attribute name="NAME" x="45.6438" y="39.9288" size="1.27" layer="25" ratio="10"/>
-<attribute name="VALUE" x="45.72" y="34.925" size="1.27" layer="27"/>
-</element>
-<element name="A1_I" library="pinhead" library_urn="urn:adsk.eagle:library:325" package="1X01" package3d_urn="urn:adsk.eagle:package:22485/2" value="" x="66.04" y="22.86" smashed="yes">
-<attribute name="NAME" x="64.6938" y="24.6888" size="1.27" layer="25" ratio="10"/>
-<attribute name="VALUE" x="64.77" y="19.685" size="1.27" layer="27"/>
-</element>
 </elements>
 <signals>
 <signal name="N$1">
@@ -1707,14 +1699,14 @@ design rules under a new name.</description>
 <wire x1="80.01" y1="45.72" x2="76.2" y2="45.72" width="0.1524" layer="16"/>
 </signal>
 <signal name="N$7">
-<contactref element="A1_O" pad="1"/>
 <contactref element="IC2" pad="3"/>
-<wire x1="41.91" y1="38.1" x2="46.99" y2="38.1" width="0.1524" layer="16"/>
-</signal>
-<signal name="N$11">
-<contactref element="A1_I" pad="1"/>
 <contactref element="IC1" pad="5"/>
-<wire x1="66.04" y1="22.86" x2="74.93" y2="22.86" width="0.1524" layer="16"/>
+<wire x1="41.91" y1="38.1" x2="50.8" y2="38.1" width="0.1524" layer="16"/>
+<via x="50.8" y="38.1" extent="1-16" drill="0.35" shape="square"/>
+<wire x1="74.93" y1="22.86" x2="67.31" y2="22.86" width="0.1524" layer="16"/>
+<via x="67.31" y="22.86" extent="1-16" drill="0.35" shape="square"/>
+<wire x1="67.31" y1="22.86" x2="66.04" y2="22.86" width="0.1524" layer="1"/>
+<wire x1="66.04" y1="22.86" x2="50.8" y2="38.1" width="0.1524" layer="1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

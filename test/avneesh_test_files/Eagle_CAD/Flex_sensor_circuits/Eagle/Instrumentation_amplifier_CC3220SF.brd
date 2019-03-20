@@ -1552,9 +1552,9 @@ design rules under a new name.</description>
 <attribute name="NAME" x="49.4538" y="34.8488" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="49.53" y="29.845" size="1.27" layer="27"/>
 </element>
-<element name="OUT" library="pinhead" library_urn="urn:adsk.eagle:library:325" package="1X01" package3d_urn="urn:adsk.eagle:package:22485/2" value="" x="76.2" y="45.72" smashed="yes">
-<attribute name="NAME" x="74.8538" y="47.5488" size="1.27" layer="25" ratio="10"/>
-<attribute name="VALUE" x="74.93" y="42.545" size="1.27" layer="27"/>
+<element name="OUT" library="pinhead" library_urn="urn:adsk.eagle:library:325" package="1X01" package3d_urn="urn:adsk.eagle:package:22485/2" value="" x="74.93" y="45.72" smashed="yes">
+<attribute name="NAME" x="73.5838" y="47.5488" size="1.27" layer="25" ratio="10"/>
+<attribute name="VALUE" x="73.66" y="42.545" size="1.27" layer="27"/>
 </element>
 <element name="RB1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="0204/7" package3d_urn="urn:adsk.eagle:package:23498/2" value="6.8 kΩ" x="58.42" y="24.13" smashed="yes" rot="R90">
 <attribute name="NAME" x="57.1246" y="21.59" size="0.9906" layer="25" ratio="10" rot="R90"/>
@@ -1693,10 +1693,9 @@ design rules under a new name.</description>
 <contactref element="RF2" pad="2"/>
 <contactref element="IC1" pad="1"/>
 <contactref element="OUT" pad="1"/>
-<wire x1="76.2" y1="45.72" x2="76.2" y2="34.29" width="0.1524" layer="16"/>
-<wire x1="76.2" y1="34.29" x2="74.93" y2="33.02" width="0.1524" layer="16"/>
+<wire x1="74.93" y1="45.72" x2="74.93" y2="33.02" width="0.1524" layer="16"/>
 <wire x1="80.01" y1="45.72" x2="80.01" y2="44.45" width="0.1524" layer="16"/>
-<wire x1="80.01" y1="45.72" x2="76.2" y2="45.72" width="0.1524" layer="16"/>
+<wire x1="80.01" y1="45.72" x2="74.93" y2="45.72" width="0.1524" layer="16"/>
 </signal>
 <signal name="N$7">
 <contactref element="IC2" pad="3"/>
