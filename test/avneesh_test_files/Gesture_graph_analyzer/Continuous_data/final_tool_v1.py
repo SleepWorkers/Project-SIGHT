@@ -28,6 +28,7 @@ rf_axis = fig.add_subplot(2, 3, 4)
 num_r = []
 lf_axis = fig.add_subplot(2, 3, 5)
 num_l = []
+lbl_axis = fig.add_subplot(2, 3, 6)
 
 
 def update_axis(fnum):
@@ -69,6 +70,27 @@ def update_axis(fnum):
     lf_axis.plot(num_l)
     lf_axis.set_title("Little")
     lf_axis.set_ylim(0, 4095)
+    lbl_axis.clear()
+    lbl_axis.set_axis_off()
+    lbl_axis.set_title("Gesture")
+    # Gesture recognition part
+    if (num_t[-1] > 2500 and num_i[-1] < 2500 and num_m[-1] > 2500 and num_r[-1] > 2500 and num_l[-1] > 2900):
+        n = "1"
+    elif (num_t[-1] > 2500 and num_i[-1] < 2500 and num_m[-1] < 2500 and num_r[-1] > 2500 and num_l[-1] > 2900):
+        n = "2"
+    elif (num_t[-1] > 2500 and num_i[-1] < 2500 and num_m[-1] < 2500 and num_r[-1] < 2500 and num_l[-1] > 2900):
+        n = "3"
+    elif (num_t[-1] > 2500 and num_i[-1] < 2500 and num_m[-1] < 2500 and num_r[-1] < 2500 and num_l[-1] < 2900):
+        n = "4"
+    elif (num_t[-1] < 2500 and num_i[-1] < 2500 and num_m[-1] < 2500 and num_r[-1] < 2500 and num_l[-1] < 2900):
+        n = "5"
+    elif (num_t[-1] < 2500 and num_i[-1] < 2500 and num_m[-1] > 2500 and num_r[-1] > 2500 and num_l[-1] < 2900):
+        n = "o"
+    elif (num_t[-1] < 2500 and num_i[-1] > 2500 and num_m[-1] > 2500 and num_r[-1] > 2500 and num_l[-1] > 2900):
+        n = "k"
+    else:
+        n = "0"
+    lbl_axis.text(0.4, 0.4, n, fontsize=100)
 
 
 try:
